@@ -1,0 +1,59 @@
+{
+
+  "code": "أدخل الكود الخاص بك",
+  "code(with us)": "أدخل الكود الخاص بك (اذا كنت طالب لدينا )",
+  "full name": "أدخل الأسم بالكامل",
+  "your full name": "الأسم بالكامل",
+  "email": "أدخل البريد الألكتروني الخاص بك ",
+  "Password": "أدخل كلمة المرور ",
+  "Password ": "كلمة المرور ",
+  "Confirm your password": "تأكيد كلمة المرور ",
+  "Create Account": "إنشاء حساب ",
+  "Already have an account ?": "لديك حساب بالفعل  ",
+  "Don’t have an account?": " ليس لديك حساب؟ ",
+  "Login":  "تسجيل الدخول",
+  "newVisitor":  " الدخول كزائر",
+  "forget":  "نسيت كلمة المرور؟",
+  "Submit": "تأكيد",
+  "  Don’t worry if you forgot the password! Please enter your email\n  and we'll send you reset instructions.": "لا تقلق اذا نسيت كلمة المرور من فضلك ادخل البريد الألكتروني و سيتم ارسال تأكيد عليه",
+ "basics": "كورس الأساسيات",
+  "first Chapter" : " محاضرات الباب الأول العناصر الأنتقالية",
+  "Second Chapter" : " محاضرات الباب الثانى التحليل الكيميائي",
+  "Third Chapter" : "محاضرات الباب الثالث الأتزان الكيميائي",
+  "Fourth Chapter" : "محاضرات الباب الرابع ",
+  "Fifth Chapter" : "محاضرات الكيمياء العضوية",
+  "Third Secondary" : "الدخول للكورس",
+  "buy course" : "   شراء الكورس",
+  "Home":"الرئيسية",
+  "walk up" : " انت صاحي معايا اوى !",
+  "account": "حسابي",
+
+
+  "Myaccount": "الملف الشخصى",
+  "courses": "كورساتى",
+  "results": "نتائج الأمتحانات",
+  "recharge": "شحن المحفظة",
+  "FAQ": "الشكاوي و الأقتراحات",
+  "aboutApp": "عن التطبيق",
+  "changeLang": "تغيير اللغة",
+  "logOut": "تسجيل الخروج",
+"noData":  "مرحبا بك برجاء إنشاء حساب",
+  "home": "الرئيسية",
+
+
+
+  "userName": "اسم المستخدم",
+  "yourCode": "الكود الخاص بك",
+  "edit password" : "تعديل كلمة المرور",
+  "confirm edit password" : "تأكيد تعديل كلمة المرور",
+  "edit your profile": "تعديل الملف الشخصى",
+
+  "send": "إرسال",
+  "enter suggestion": "إذا كان لديك شكوي او أقتراح شاركنا به",
+  "Type your suggestion": "أدخل شكوتك او أقتراحك"
+
+
+
+
+
+}
