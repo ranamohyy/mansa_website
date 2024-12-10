@@ -14,10 +14,10 @@ class Responsive extends StatelessWidget {
 
     return LayoutBuilder(builder: (context, constraints) {
       var w = constraints.maxWidth;
-      if (w <= 700) {
+      if (w <= 600) {
         return mob(context);
       }
-      else if (w >= 700 && w < 1024) {
+      else if (w >= 600 && w < 1024) {
         return tab(context);
       }
       else {

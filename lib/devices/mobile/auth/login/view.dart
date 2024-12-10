@@ -45,7 +45,7 @@ class _MobileLoginViewState extends State<MobileLoginView> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 gapButton,
-                const LogoOfAppWidget(),
+                LogoOfAppWidget(),
                 TextAuth(text: "full name"),
                 space,
                 MyInput(

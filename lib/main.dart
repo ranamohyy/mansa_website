@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
               seedColor: Colors.red),
           useMaterial3: true,
         ),
-        home:  const  ForgetPassword()
+        home:  const  LoginView()
         // HomePage(type: ourStudent) ,
       ),
     );
