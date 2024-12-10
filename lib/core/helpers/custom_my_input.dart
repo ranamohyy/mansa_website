@@ -21,7 +21,6 @@ class MyInput extends StatelessWidget {
   Widget build(BuildContext context) {
      return Center(
       child: SizedBox(
-        width: Responsive.isWeb(context)? 200.w :height,
         child: TextFormField(
           onTap:onTap ,
           enabled: enabled,

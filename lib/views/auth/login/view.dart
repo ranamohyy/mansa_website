@@ -7,6 +7,7 @@ class LoginView extends StatelessWidget {
   const LoginView({super.key});
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size.width);
     return Scaffold(
       backgroundColor: Colors.white,
       body: Responsive(

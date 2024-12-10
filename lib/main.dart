@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mansa/core/routes/route.dart';
 import 'package:mansa/core/utils/constans.dart';
 import 'package:mansa/views/auth/login/view.dart';
+import 'package:mansa/views/auth/signUp/view.dart';
 import 'package:mansa/views/home/home.dart';
 import 'devices/mobile/auth/login/view.dart';
 
@@ -61,7 +62,6 @@ class MyApp extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: kPrimaryColor,
               maximumSize: MediaQuery.of(context).size,
-
               fixedSize: Size.fromHeight(45.h),
               padding: EdgeInsets.symmetric(horizontal: 12.w),
               shape: RoundedRectangleBorder(
@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
               seedColor: Colors.red),
           useMaterial3: true,
         ),
-        home:  const LoginView()
+        home:  const  SignupView()
         // HomePage(type: ourStudent) ,
       ),
     );

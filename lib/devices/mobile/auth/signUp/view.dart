@@ -20,8 +20,8 @@ class MobileSignupView extends StatefulWidget {
 class _SignupViewState extends State<MobileSignupView> {
   final TextEditingController _passwordController = TextEditingController();
   bool isPasswordVisible = false;
-  final _key=GlobalKey<FormState>();
-  final TextEditingController codeController =TextEditingController();
+  final _key = GlobalKey<FormState>();
+  final TextEditingController codeController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class _SignupViewState extends State<MobileSignupView> {
         child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 30.h),
             child: Form(
-              key:_key ,
+              key: _key,
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -48,15 +48,15 @@ class _SignupViewState extends State<MobileSignupView> {
                     ),
                     space,
                     MyInput(
-                      keyboardType:TextInputType.number,
+                      keyboardType: TextInputType.number,
                       controller: codeController,
                       text: "code(with us)",
-                    validator: (v){
-                     if (v==null ||v.isEmpty){return;}
-
-                    }
-
-                    ,),
+                      validator: (v) {
+                        if (v == null || v.isEmpty) {
+                          return;
+                        }
+                      },
+                    ),
                     gap,
                     TextAuth(text: "full name"),
                     space,
@@ -67,6 +67,14 @@ class _SignupViewState extends State<MobileSignupView> {
                     ),
                     space,
                     MyInput(text: 'email'),
+                    gap,
+                    TextAuth(text: "your phone"),
+                    space,
+                    MyInput(text: "your phone"),
+                    gap,
+                    TextAuth(text: "your parent number"),
+                    space,
+                    MyInput(text: "your parent number"),
                     gap,
                     TextAuth(
                       text: "Password",
@@ -92,13 +100,13 @@ class _SignupViewState extends State<MobileSignupView> {
                         style: kTextStyle14White,
                       ).tr(),
                       onPressed: () {
-                        if(codeController.text.isNotEmpty){
-
-                        AppRouter.navigateAndRemoveAll(const HomePage(type: ourStudent,))
-                        ;}
-                        else
-                        {
-                          AppRouter.navigateAndRemoveAll(const HomePage(type: notOurStudent));
+                        if (codeController.text.isNotEmpty) {
+                          AppRouter.navigateAndRemoveAll(const HomePage(
+                            type: ourStudent,
+                          ));
+                        } else {
+                          AppRouter.navigateAndRemoveAll(
+                              const HomePage(type: notOurStudent));
                         }
                       },
                     ),
