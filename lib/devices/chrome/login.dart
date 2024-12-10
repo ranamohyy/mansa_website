@@ -27,80 +27,96 @@ class WebLoginView extends StatelessWidget {
         key: _key,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 30.h),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              gapButton,
-              Container(height: 50, width: 50, child: const LogoOfAppWidget()),
-              TextAuth(text: "full name"),
-              space,
-              MyInput(
-                text: "your full name",
-                enabled: true,
-              ),
-              gap,
-              TextAuth(text: "code"),
-              space,
-              MyInput(
-                keyboardType: TextInputType.number,
-                validator: (v) {
-                  if (v == null || v.isEmpty) {
-                    return;
-                  }
-                },
-                text: 'code(with us)',
-                controller: _idController,
-              ),
-              gap,
-              TextAuth(text: "Password"),
-              space,
-              MyInput(
-                text: 'Password ',
-              ),
-              Row(
+          child: Center(
+            child: SizedBox(
+              width: 450,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  TextButton(
-                    onPressed: () {
-                      AppRouter.navigateTo(const ForgetPassword());
-                    },
-                    child: Text("forget",
-                            style: kTextStyle11grey.copyWith(fontSize: 14))
-                        .tr(),
+                  gapButton,
+                  const AspectRatio(
+                      aspectRatio: 0.1 / 0.032, child: LogoOfAppWidget()),
+                  TextAuth(text: "full name"),
+                  space,
+                  MyInput(
+                    text: "your full name",
+                    enabled: true,
                   ),
+                  gap,
+                  TextAuth(text: "code"),
+                  space,
+                  MyInput(
+                    keyboardType: TextInputType.number,
+                    validator: (v) {
+                      if (v == null || v.isEmpty) {
+                        return;
+                      }
+                    },
+                    text: 'code(with us)',
+                    controller: _idController,
+                  ),
+                  gap,
+                  TextAuth(text: "Password"),
+                  space,
+                  MyInput(
+                    text: 'Password ',
+                  ),
+                  Row(
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          AppRouter.navigateTo(const ForgetPassword());
+                        },
+                        child: Text("forget",
+                                style: kTextStyle11grey.copyWith(fontSize: 14))
+                            .tr(),
+                      ),
+                    ],
+                  ),
+                  Center(
+                    child: SizedBox(
+                      width: 100.w,
+                      child: MyButton(
+                        child: const Text(
+                          "Login",
+                          style: kTextStyle14White,
+                        ).tr(),
+                        onPressed: () {
+                          _idController.text.isEmpty
+                              ? AppRouter.navigateAndRemoveAll(const HomePage(
+                                  type: notOurStudent,
+                                ))
+                              : AppRouter.navigateAndRemoveAll(const HomePage(
+                                  type: ourStudent,
+                                ));
+                        },
+                      ),
+                    ),
+                  ),
+                  gapButton,
+                  Center(
+                    child: SizedBox(
+                      width: 100.w,
+                      child: MyButton(
+                        backgroundColor: kSecondColor,
+                        child: const Text(
+                          "newVisitor",
+                          style: kTextStyle14White,
+                        ).tr(),
+                        onPressed: () {
+                          AppRouter.navigateAndRemoveAll(const HomePage(
+                            type: visitor,
+                          ));
+                        },
+                      ),
+                    ),
+                  ),
+                  gap,
+                  const DoNotHaveAccountWidget()
                 ],
               ),
-              MyButton(
-                child: const Text(
-                  "Login",
-                  style: kTextStyle14White,
-                ).tr(),
-                onPressed: () {
-                  _idController.text.isEmpty
-                      ? AppRouter.navigateAndRemoveAll(const HomePage(
-                          type: notOurStudent,
-                        ))
-                      : AppRouter.navigateAndRemoveAll(const HomePage(
-                          type: ourStudent,
-                        ));
-                },
-              ),
-              gapButton,
-              MyButton(
-                backgroundColor: kSecondColor,
-                child: const Text(
-                  "newVisitor",
-                  style: kTextStyle14White,
-                ).tr(),
-                onPressed: () {
-                  AppRouter.navigateAndRemoveAll(const HomePage(
-                    type: visitor,
-                  ));
-                },
-              ),
-              gap,
-              const DoNotHaveAccountWidget()
-            ],
+            ),
           ),
         ),
       ),
