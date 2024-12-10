@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mansa/core/routes/route.dart';
 import 'package:mansa/core/utils/constans.dart';
+import 'package:mansa/views/auth/forget_password/view.dart';
 import 'package:mansa/views/auth/login/view.dart';
 import 'package:mansa/views/auth/signUp/view.dart';
 import 'package:mansa/views/home/home.dart';
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
               seedColor: Colors.red),
           useMaterial3: true,
         ),
-        home:  const  LoginView()
+        home:  const  ForgetPassword()
         // HomePage(type: ourStudent) ,
       ),
     );
