@@ -6,11 +6,12 @@ import 'package:mansa/core/res/responsive.dart';
 import '../utils/constans.dart';
 class MyInput extends StatelessWidget {
    MyInput({super.key,this.height,this.validator, this.obscureText=false,
-     this.onChanged,required this.text,this.controller,this.autofillHints,this.keyboardType,this.enabled});
+     this.onChanged,required this.text,this.controller,this.autofillHints,this.keyboardType,this.enabled,this.onTap});
   void Function(String)? onChanged;
    TextEditingController? controller;
    String? Function(String?)? validator;
   String text;
+   void Function()? onTap;
    bool ?obscureText;
    Iterable<String>?autofillHints;
    TextInputType? keyboardType;
@@ -22,6 +23,7 @@ class MyInput extends StatelessWidget {
       child: SizedBox(
         width: Responsive.isWeb(context)? 200.w :height,
         child: TextFormField(
+          onTap:onTap ,
           enabled: enabled,
           autofillHints:autofillHints ,
           keyboardType:keyboardType ,

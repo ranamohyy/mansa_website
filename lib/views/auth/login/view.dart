@@ -12,7 +12,7 @@ class LoginView extends StatelessWidget {
       body: Responsive(
         mob:(context) =>   MobileLoginView(),
         tab:(context) =>  const TabletLoginViw(),
-        web:(context) =>  const WebLoginView(),
+        web:(context) =>   WebLoginView(),
 
       )
 
