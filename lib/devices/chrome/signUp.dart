@@ -13,20 +13,14 @@ import '../mobile/auth/widgets/text_auth.dart';
 class WebSignUpView extends StatefulWidget {
   WebSignUpView({super.key, this.type});
   final String? type;
-
   @override
   State<WebSignUpView> createState() => _WebSignUpViewState();
 }
-
 class _WebSignUpViewState extends State<WebSignUpView> {
   final TextEditingController _passwordController = TextEditingController();
-
   bool isPasswordVisible = false;
-
   final _key = GlobalKey<FormState>();
-
   final TextEditingController codeController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -36,7 +30,7 @@ class _WebSignUpViewState extends State<WebSignUpView> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: ScrollConfiguration(
-        behavior: ScrollBehavior().copyWith(overscroll: false),
+        behavior:const  ScrollBehavior().copyWith(overscroll: false),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
@@ -51,7 +45,6 @@ class _WebSignUpViewState extends State<WebSignUpView> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          // SizedBox(height: 15.h),
                          const AspectRatio(
                               aspectRatio: 0.1 / 0.032,
                               child: LogoOfAppWidget()),
