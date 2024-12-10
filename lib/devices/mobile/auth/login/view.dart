@@ -12,7 +12,7 @@ import '../widgets/logo_name_app.dart';
 import '../widgets/text_auth.dart';
 
 class MobileLoginView extends StatefulWidget {
-  MobileLoginView({super.key});
+const  MobileLoginView({super.key});
 
   @override
   State<MobileLoginView> createState() => _MobileLoginViewState();
@@ -45,7 +45,7 @@ class _MobileLoginViewState extends State<MobileLoginView> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 gapButton,
-                LogoOfAppWidget(),
+                const LogoOfAppWidget(),
                 TextAuth(text: "full name"),
                 space,
                 MyInput(
