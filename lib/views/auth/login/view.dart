@@ -11,7 +11,7 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Responsive(
-        mob:(context) =>   MobileLoginView(),
+        mob:(context) =>const MobileLoginView(),
         tab:(context) =>   TabletLoginViw(),
         web:(context) =>   WebLoginView(),
 
