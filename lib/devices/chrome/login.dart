@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../views/auth/forget_password/body_login.dart';
+import '../../views/auth/login/body_login.dart';
 class WebLoginView extends StatelessWidget {
   const WebLoginView({super.key});
   @override
@@ -8,7 +8,6 @@ class WebLoginView extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Padding(
-        // padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 30.h),
         padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 10.h),
         child: Center(
           child: SizedBox(

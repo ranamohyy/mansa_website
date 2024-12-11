@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../views/auth/login/body_signUp.dart';
+import '../../../../views/auth/signUp/body_signUp.dart';
 class MobileSignupView extends StatefulWidget {
   const MobileSignupView({super.key, });
   @override

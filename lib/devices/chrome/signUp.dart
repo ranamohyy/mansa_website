@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mansa/views/auth/login/body_signUp.dart';
+import 'package:mansa/views/auth/signUp/body_signUp.dart';
 
 class WebSignUpView extends StatefulWidget {
   const WebSignUpView({super.key});
