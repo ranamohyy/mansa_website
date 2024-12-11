@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
               seedColor: Colors.red),
           useMaterial3: true,
         ),
-        home:  const  SignupView()
+        home:  const  ForgetPassword()
         // HomePage(type: ourStudent) ,
       ),
     );

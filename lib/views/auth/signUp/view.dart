@@ -15,9 +15,9 @@ class _SignupViewState extends State<SignupView> {
     return Scaffold(
       backgroundColor: Colors.white,
         body:Responsive(
-            mob: (context) =>  MobileSignupView(),
-            web: (context) =>  WebSignUpView() ,
-            tab: (context) =>  TabletSignupView(),)
+            mob: (context) =>  const MobileSignupView(),
+            web: (context) =>  const WebSignUpView() ,
+            tab: (context) =>  const TabletSignupView(),)
 
     );
   }

@@ -10,11 +10,12 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         backgroundColor: Colors.white,
-        body: Responsive(mob: (context) => const MobileForgetPassword()
-            , web:(context) =>  const WebForgetPassword(),
-            tab: (context) =>const TabletForgetPassword(),));
+        body: Responsive(
+          mob: (context) => const MobileForgetPassword(),
+          web: (context) => const WebForgetPassword(),
+          tab: (context) => const TabletForgetPassword(),
+        ));
   }
 }
