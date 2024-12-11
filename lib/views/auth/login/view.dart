@@ -12,8 +12,8 @@ class LoginView extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Responsive(
         mob:(context) =>const MobileLoginView(),
-        tab:(context) =>   TabletLoginViw(),
-        web:(context) =>   WebLoginView(),
+        tab:(context) =>  const  TabletLoginViw(),
+        web:(context) => const  WebLoginView(),
 
       )
 
