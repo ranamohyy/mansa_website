@@ -78,6 +78,32 @@ static String capitalize(String word) {
     }
 
   }
+  static double  sizeOfItemWeb(context) {
+    final width=MediaQuery.of(context).size.width;
+    if(width==1050){
+      return  120.w/ 175.h ;
+
+    // }else if(width>720&&width<915){
+    //   return 120.w/ 200.h ;
+    // }else if(width>=915&&width<1024){
+    //   return 130.w/ 230.h ;
+    }else{
+      return 45.w/ 135;
+    }
+
+  }
+  static double  sizeOfButtonForMyProfileVisitor(context) {
+    final width=MediaQuery.of(context).size.width;
+    if(width>950&&width<1250){
+      return  240;
+    }
+    if(width>1250){
+      return  290;
+    }
+      else{
+        return 220;
+    }
+    }
 
 
 
