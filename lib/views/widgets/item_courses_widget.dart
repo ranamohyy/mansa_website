@@ -26,52 +26,59 @@ class ItemCoursesWidget extends StatelessWidget {
         boxShadow: const [BoxShadow(blurRadius: 2, color: Colors.grey)],
         borderRadius: BorderRadius.circular(12.r),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextAuth(text: labels, style: kTextStyle15bold),
-          SizedBox(
-            height: 8.h,
-          ),
-          Stack(alignment: Alignment.center, children: [
-            const LogoOfAppWidget(),
-            Icon(
-              type==ourStudent  || widget == "me"?
-              Icons.slow_motion_video:
-                  Icons.lock_outline
-              ,
-              size: 90,
-              color: Colors.grey[400],
+      child: Stack(
+        alignment: Alignment.bottomRight,
+        children:[
+          Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextAuth(text: labels, style: kTextStyle15bold),
+            SizedBox(
+              height: 8.h,
             ),
-          ]),
-          SizedBox(
-            height: 8.h,
-          ),
-          type==visitor || widget == "me"?SizedBox():
+            Stack(alignment: Alignment.center, children: [
+              const LogoOfAppWidget(),
+              Icon(
+                type==ourStudent  || widget == "me"?
+                Icons.slow_motion_video:
+                    Icons.lock_outline
+                ,
+                size: 90,
+                color: Colors.grey[400],
+              ),
+            ]),
+            SizedBox(
+              height: 8.h,
+            ),
 
-          Container(
-             width:Responsive.isTab(context)||Responsive.isWeb(context)?
-             type==notOurStudent?100.w :70.w:
 
-             type==notOurStudent?100.w :125.w
 
-            ,
-             height: 25.h,
-             decoration: BoxDecoration(
-                 color:  kColor,
+        ]),
+          type==visitor || widget == "me"?SizedBox() :  Container(
+            width:Responsive.isTab(context)||Responsive.isWeb(context)?
+            type==notOurStudent?40.w :40.w:
+            type==notOurStudent?100.w :125.w,
 
-                 borderRadius: BorderRadius.circular(22.r)),
+            height:
+            Responsive.isTab(context)||Responsive.isWeb(context)?
+            type==notOurStudent?40.h :40.h:
+
+            32,
+            decoration: BoxDecoration(
+                color:  kColor,
+
+                borderRadius: BorderRadius.circular(22.r)),
             child:
-            Text(
-              textAlign: TextAlign.center,
-
-              type==ourStudent?
-                  "Third Secondary"  : "buy course",
-              style: kTextStyle15grey.copyWith(color: Colors.white),
-            ).tr(),
+            Center(
+              child: Text(
+                type==ourStudent?
+                "Third Secondary"  : "buy course",
+                style: kTextStyle15grey.copyWith(color: Colors.white),
+              ).tr(),
+            ),
           ),
-        ],
-      ),
+
+        ]),
     );
   }
 }

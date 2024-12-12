@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
 body: Responsive(
   mob:(context) =>  HomeMobileView(type: type,) ,
   tab: (context) =>  TabletHomeView(type: type,),
-  web: (context) =>const WebHomeView() ,
+  web: (context) => WebHomeView(type: type,) ,
 
 ),
     );
