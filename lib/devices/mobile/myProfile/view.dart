@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mansa/core/res/responsive.dart';
 import 'package:mansa/views/widgets/custom_app_bar.dart';
 import '../../../core/utils/constans.dart';
 import '../../../views/widgets/custom_profle_tiles_widget.dart';
@@ -8,9 +9,10 @@ class MobileMyProfile extends StatelessWidget {
 final String ?type;
   @override
   Widget build(BuildContext context) {
-    print("hey iam ${type}");
     return  Scaffold(
-      appBar:const MyAppBar(text: "account"),
+      appBar:
+      Responsive.isMob(context)?
+      const MyAppBar(text: "account"):null,
       backgroundColor: Colors.white,
       body:
       type ==visitor || type==null ?const VisitorViewWidget() :
