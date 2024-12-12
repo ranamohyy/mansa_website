@@ -10,10 +10,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print("========================${type}");
+    print(MediaQuery.of(context).size.width);
+
     return  Scaffold(
 body: Responsive(
   mob:(context) =>  HomeMobileView(type: type,) ,
-  tab: (context) => const TabletHomeView(),
+  tab: (context) =>  TabletHomeView(type: type,),
   web: (context) =>const WebHomeView() ,
 
 ),

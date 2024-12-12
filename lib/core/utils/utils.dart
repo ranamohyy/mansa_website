@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class Utils {
   static void show(BuildContext context) {
     showDialog(
@@ -61,6 +62,21 @@ static String capitalize(String word) {
     }
 
     return '${capitalize(firstName)} ${capitalize(lastName)}';
+  }
+
+  static double  sizeOfItem(context) {
+    final width=MediaQuery.of(context).size.width;
+    if(width<=720){
+      return  120.w/ 175.h ;
+
+    }else if(width>720&&width<915){
+      return 120.w/ 200.h ;
+    }else if(width>=915&&width<1024){
+      return 130.w/ 230.h ;
+    }else{
+      return 80.w/ 145.h;
+    }
+
   }
 
 

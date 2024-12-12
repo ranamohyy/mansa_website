@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../core/routes/route.dart';
 import '../../core/utils/constans.dart';
+import '../../core/utils/utils.dart';
 import '../../models/courses_model.dart';
 import '../../views/widgets/custom_app_bar.dart';
 import '../../views/widgets/header_widet.dart';
@@ -12,11 +11,10 @@ import '../mobile/myProfile/view.dart';
 import '../mobile/myProfile/views/charge.dart';
 
 class TabletHomeView extends StatelessWidget {
-  const TabletHomeView({super.key, this.type});
-  final String? type;
+  const TabletHomeView({super.key, required this.type});
+  final String type;
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.width);
     return Scaffold(
         backgroundColor: Colors.white,
         extendBodyBehindAppBar: false,
@@ -53,10 +51,7 @@ class TabletHomeView extends StatelessWidget {
                 gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 15,
-                  childAspectRatio:
-                  MediaQuery.of(context).size.width<=660?
-                  130.w/ 185.h:
-                  130.w/ 250,
+                  childAspectRatio: Utils.sizeOfItem(context),
                   crossAxisSpacing: 10,
                 ),
                 delegate: SliverChildBuilderDelegate(
