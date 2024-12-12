@@ -17,7 +17,7 @@ class Responsive extends StatelessWidget {
       if (w <= 550) {
         return mob(context);
       }
-      else if (w >= 550 && w < 1024) {
+      else if (w >= 550 && w < 1050) {
         return tab(context);
       }
       else {

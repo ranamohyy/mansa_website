@@ -22,7 +22,9 @@ class _HomeMobileViewState extends State<HomeMobileView> {
     print(selectedIndex);
     return  Scaffold(
       body: pages[selectedIndex],
-      bottomNavigationBar:CustomNavBar(index: selectedIndex,
+      bottomNavigationBar:
+
+      CustomNavBar(index: selectedIndex,
            onDestinationSelected: (value) {
           setState(() { selectedIndex=value;});
         },

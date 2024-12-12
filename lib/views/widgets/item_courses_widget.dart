@@ -1,18 +1,25 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mansa/core/res/responsive.dart';
 import '../../core/utils/constans.dart';
 import '../../devices/mobile/auth/widgets/logo_name_app.dart';
 import '../../devices/mobile/auth/widgets/text_auth.dart';
 
 class ItemCoursesWidget extends StatelessWidget {
-  const ItemCoursesWidget({super.key, required this.labels, this.type,this.widget});
+  const ItemCoursesWidget({super.key,
+    this.height,this.width,
+    required this.labels, this.type,this.widget});
   final String labels;
   final String? type;
   final  String? widget;
+  final double ?height;
+  final double ?width;
   @override
   Widget build(BuildContext context) {
     return Container(
+      width:width ,
+      height:height ,
       padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -43,7 +50,12 @@ class ItemCoursesWidget extends StatelessWidget {
           type==visitor || widget == "me"?SizedBox():
 
           Container(
-             width:   type==notOurStudent?100.w :125.w,
+             width:Responsive.isTab(context)||Responsive.isWeb(context)?
+             type==notOurStudent?100.w :70.w:
+
+             type==notOurStudent?100.w :125.w
+
+            ,
              height: 25.h,
              decoration: BoxDecoration(
                  color:  kColor,

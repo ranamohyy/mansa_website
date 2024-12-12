@@ -5,9 +5,10 @@ import 'package:mansa/devices/mobile/home/course_details.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
 import 'package:mansa/views/widgets/item_courses_widget.dart';
 
+import '../../../models/courses_model.dart';
+
 class CourseView extends StatelessWidget {
-  CourseView({super.key, required this.appBar});
-  final String appBar;
+  CourseView({super.key,});
 
   List<String> labels = [
     "شرح الدرس الأول",
@@ -24,7 +25,7 @@ class CourseView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-        appBar: AppBarHelper(text: appBar),
+        appBar: AppBarHelper(text: HomeModel.labelOfLessons[0].toString()),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
