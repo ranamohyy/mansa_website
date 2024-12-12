@@ -27,9 +27,9 @@ class TabletHomeView extends StatelessWidget {
                   },
                   icon: const Icon(Icons.menu));
             })),
-        drawer: const Drawer(
+        drawer:  Drawer(
           child: MobileMyProfile(
-            type: ourStudent,
+            type: type,
           ),
         ),
         body: CustomScrollView(slivers: [
@@ -48,7 +48,7 @@ class TabletHomeView extends StatelessWidget {
                 horizontal: 20.0,
               ),
               sliver: SliverGrid(
-                gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 15,
                   childAspectRatio: Utils.sizeOfItem(context),
@@ -69,7 +69,7 @@ class TabletHomeView extends StatelessWidget {
                       },
                       child: ItemCoursesWidget(
                         labels: HomeModel.labelOfCourses[i],
-                        type: ourStudent,
+                        type: type,
                       ),
                     );
                   },
