@@ -14,7 +14,7 @@ class TabletSignupView extends StatelessWidget {
           child: SizedBox(
             width: 450,
             child: BodySignup(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               aspectRatio: 0.08 / 0.032,
               buttonWidth: 100.w,
