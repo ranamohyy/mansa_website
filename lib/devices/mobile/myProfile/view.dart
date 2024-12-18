@@ -15,7 +15,8 @@ final String ?type;
       const MyAppBar(text: "account"):null,
       backgroundColor: Colors.white,
       body:
-      type ==visitor || type==null ?const VisitorViewWidget() :
+      type ==visitor || type==null ?
+      const VisitorViewWidget() :
        CustomProfileWidget(type: type!,)
     );
   }

@@ -14,8 +14,9 @@ import '../../devices/mobile/myProfile/views/myAcc.dart';
 import '../../devices/mobile/myProfile/views/myCourses.dart';
 import '../../devices/mobile/myProfile/views/results.dart';
 import 'custom_item_profile_widget.dart';
+
 class CustomProfileWidget extends StatefulWidget {
-   CustomProfileWidget({super.key,required this.type});
+  CustomProfileWidget({super.key, required this.type});
   final String type;
 
   @override
@@ -23,7 +24,7 @@ class CustomProfileWidget extends StatefulWidget {
 }
 
 class _CustomProfileWidgetState extends State<CustomProfileWidget> {
-  List<String>labels=[
+  List<String> labels = [
     "Myaccount",
     "courses",
     "results",
@@ -34,62 +35,53 @@ class _CustomProfileWidgetState extends State<CustomProfileWidget> {
     "logOut"
   ];
 
-   List<Widget>label=[
-     MyAcc(),
-     MyCourses(),
-     Results(),
-     ChargeWallet(),
-     Suggestions(),
-     Aboutapp(),
+  List<Widget> label = [
+    MyAcc(),
+    MyCourses(),
+    Results(),
+    ChargeWallet(),
+    Suggestions(),
+    Aboutapp(),
+  ];
 
-
-   ];
-
-   List <Widget>icons=[
-     SvgPicture.asset(AppImage.user),
-     SvgPicture.asset(AppImage.courses),
-     SvgPicture.asset(AppImage.results),
-     SvgPicture.asset(AppImage.chargeWallet),
-     SvgPicture.asset(AppImage.faq),
-    const FaIcon(
-      FontAwesomeIcons.circleQuestion
-    ,color: Color(0xff4EB7F2)
-
+  List<Widget> icons = [
+    SvgPicture.asset(AppImage.user),
+    SvgPicture.asset(AppImage.courses),
+    SvgPicture.asset(AppImage.results),
+    SvgPicture.asset(AppImage.chargeWallet),
+    SvgPicture.asset(AppImage.faq),
+    const FaIcon(FontAwesomeIcons.circleQuestion, color: Color(0xff4EB7F2)),
+    const Icon(
+      Icons.language,
+      color: Color(0xff4EB7F2),
     ),
-     const Icon(Icons.language,color: Color(0xff4EB7F2),),
-     SvgPicture.asset(AppImage.logout),
-
-
-
-   ];
+    SvgPicture.asset(AppImage.logout),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return    Padding(
+    return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ListView.builder(
-        itemCount: labels.length,
-        itemBuilder: (context, index) => ItemProfileWidget(
-          icon:icons[index] ,
-          label: labels[index],
-          onTap:() {
-            if(index==6){
-              setState(() {
-                final newLocale=context.locale.languageCode=="en"?Locale('ar'):Locale('en');
-                context.setLocale(newLocale);
-
-              });
-            }
-            if(index==7){
-                AppRouter.navigateAndRemoveAll(const LoginView());
-            }
-            else if(index<label.length){
-            AppRouter.navigateTo(label[index]);}
-
-
-          })
-
-    ),
+          itemCount: labels.length,
+          itemBuilder: (context, index) => ItemProfileWidget(
+              icon: icons[index],
+              label: labels[index],
+              onTap: () {
+                if (index == 6) {
+                  setState(() {
+                    final newLocale = context.locale.languageCode == "en"
+                        ? Locale('ar')
+                        : Locale('en');
+                    context.setLocale(newLocale);
+                  });
+                }
+                if (index == 7) {
+                  AppRouter.navigateAndRemoveAll(const LoginView());
+                } else if (index < label.length) {
+                  AppRouter.navigateTo(label[index]);
+                }
+              })),
     );
   }
 }
