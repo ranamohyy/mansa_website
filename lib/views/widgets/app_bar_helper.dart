@@ -10,7 +10,8 @@ class AppBarHelper extends StatelessWidget implements PreferredSizeWidget{
   final List<Widget> ?actions;
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return
+      AppBar(
       actions:actions,
       // actions,
       scrolledUnderElevation: 0,
