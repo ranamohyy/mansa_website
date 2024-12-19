@@ -7,7 +7,7 @@ import '../../../devices/mobile/auth/widgets/already_have_account.dart';
 import '../../../devices/mobile/auth/widgets/text_auth.dart';
 import '../../home/home.dart';
 import '../../widgets/custom_button_for_devices.dart';
-import '../../widgets/custom_logo_for_devices.dart';
+import '../../widgets/custom_logo_for_devices_in_auth.dart';
 class BodySignup extends StatefulWidget {
   const BodySignup({super.key, this.mainAxisAlignment, this.crossAxisAlignment, this.aspectRatio = 0.0, this.buttonWidth = 0.0,});
   final double? aspectRatio;

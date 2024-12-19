@@ -8,7 +8,7 @@ import '../../../devices/mobile/auth/widgets/forget_password.dart';
 import '../../../devices/mobile/auth/widgets/text_auth.dart';
 import '../../home/home.dart';
 import '../../widgets/custom_button_for_devices.dart';
-import '../../widgets/custom_logo_for_devices.dart';
+import '../../widgets/custom_logo_for_devices_in_auth.dart';
 
 class BodyLoginView extends StatefulWidget {
   const BodyLoginView({
