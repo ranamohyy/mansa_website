@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mansa/core/res/responsive.dart';
 import 'package:mansa/views/widgets/body_user_details_view.dart';
 import '../../../../views/widgets/app_bar_helper.dart';
