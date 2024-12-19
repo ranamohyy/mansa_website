@@ -5,10 +5,11 @@ import 'package:mansa/core/res/responsive.dart';
 import '../../core/utils/constans.dart';
 import '../../devices/mobile/auth/widgets/logo_name_app.dart';
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
-  const MyAppBar({super.key,this.onTap,
+  const MyAppBar({super.key,this.onTap,this.W,
      required this.text,});
 final String text;
 final void Function()?onTap;
+final Widget ? W;
   @override
   Widget build(BuildContext context) {
       return AppBar(
@@ -17,7 +18,7 @@ final void Function()?onTap;
         centerTitle: true,
         backgroundColor: Colors.white,
         leading:Responsive.isMob(context)?
-        const LogoOfAppWidget() :  SizedBox()
+        const LogoOfAppWidget() :W
         ,
         title: Text(text,style: kTextStyle24,).tr(),);
 
