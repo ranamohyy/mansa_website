@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:mansa/core/res/responsive.dart';
 
 import '../../core/utils/constans.dart';
 import '../../devices/mobile/auth/widgets/logo_name_app.dart';
