@@ -3,52 +3,52 @@ import 'package:mansa/core/routes/route.dart';
 import 'package:mansa/core/utils/constans.dart';
 import 'package:mansa/devices/mobile/home/course_details.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
-import 'package:mansa/views/widgets/item_courses_widget.dart';
-
+import 'package:mansa/views/widgets/custom_item_for_courses_to_home_and_courses.dart';
 import '../../../models/courses_model.dart';
+import '../../../models/lessons_model.dart';
 
 class CourseView extends StatelessWidget {
-  CourseView({super.key,});
-
-  List<String> labels = [
-    "شرح الدرس الأول",
-    "شرح الدرس الثاني",
-    "شرح الدرس الثالث",
-    "شرح الدرس الرابع",
-  ];
-  List<String> captions =[
-    "ركز على العناصر الانتقالية. يشرح مفهومها، خواصها الفيزيائية والكيميائية، وأهميتها الصناعية والبيولوجية. كما يتناول توزيعها الإلكتروني وعلاقتها بتعدد حالات الأكسدة.",
-" السبائك. يشرح مفهوم السبيكة، أنواعها، وطرق تكوينها، مع توضيح أهميتها في تحسين خواص المواد. كما يناقش أمثلة على سبائك شائعة مثل البرونز والصلب واستخداماتها العملية.",
-    "ركز على العناصر الانتقالية. يشرح مفهومها، خواصها الفيزيائية والكيميائية، وأهميتها الصناعية والبيولوجية. كما يتناول توزيعها الإلكتروني وعلاقتها بتعدد حالات الأكسدة.",
-" السبائك. يشرح مفهوم السبيكة، أنواعها، وطرق تكوينها، مع توضيح أهميتها في تحسين خواص المواد. كما يناقش أمثلة على سبائك شائعة مثل البرونز والصلب واستخداماتها العملية."];
+  CourseView({super.key,required this.title});
+final String title;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-        appBar: AppBarHelper(text: HomeModel.labelOfLessons[0].toString()),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: List.generate(
-                  captions.length,
-                  (i) => GestureDetector(
-                      onTap: () {
-                        AppRouter.navigateTo(
-                            CourseDetailsView(
-                            cousreLable: labels[i],
-                            details: captions[i]
-                            ));
-                                },
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ItemCoursesWidget(
-                         widget: "me",
-                            type: ourStudent,
-                            labels: labels[i]),
-                      ))),
-            ),
-          ),
-        ));
+        appBar: AppBarHelper(
+            text:title
+
+        ),
+        body:CustomScrollView(slivers: [
+        CustomItemCoursesForHomeAndCourses(
+    itemsCount:LessonsModel.labels.length ,
+    type: ourStudent,
+    index: 1,
+    onTap: ()=> AppRouter.navigateTo(
+    CourseDetailsView(
+    cousreLable: LessonsModel.labels[0],
+    details: LessonsModel.captions[0]
+    ))
+    )
+
+   ]) );
+        // SingleChildScrollView(
+        //   child: Padding(
+        //     padding: const EdgeInsets.all(8.0),
+        //     child: Column(
+        //       children: List.generate(
+        //           captions.length,
+        //           (i) => GestureDetector(
+        //               onTap: () {
+        //                         },
+        //               child: Padding(
+        //                 padding: const EdgeInsets.all(8.0),
+        //                 child: ItemCoursesWidget(
+        //                  widget: "me",
+        //                     type: ourStudent,
+        //                     labels: labels[i]),
+        //               ))),
+        //     ),
+        //   ),
+        // ));
   }
 }
