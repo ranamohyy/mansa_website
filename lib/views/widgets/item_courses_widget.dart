@@ -18,8 +18,8 @@ class ItemCoursesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:width ,
-      height:height ,
+      width:double.infinity ,
+      height:100 ,
       padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -29,39 +29,45 @@ class ItemCoursesWidget extends StatelessWidget {
       child: Stack(
         alignment: Alignment.bottomRight,
         children:[
-          Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextAuth(text: labels, style: kTextStyle15bold),
-            SizedBox(
-              height: 8.h,
-            ),
-            Stack(alignment: Alignment.center, children: [
-              const LogoOfAppWidget(),
-              Icon(
-                type==ourStudent  || widget == "me"?
-                Icons.slow_motion_video:
-                    Icons.lock_outline
-                ,
-                size: 90,
-                color: Colors.grey[400],
-              ),
-            ]),
-            SizedBox(
-              height: 8.h,
-            ),
+          Positioned(
+            top: 2,bottom: 2,right: 2,left: 2,
+            child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextAuth(text: labels, style: kTextStyle15bold),
+              // SizedBox(
+              //   height: 8.h,
+              // ),
+              Spacer(),
+              Stack(alignment: Alignment.center, children: [
+                const LogoOfAppWidget(),
+                Icon(
+                  type==ourStudent  || widget == "me"?
+                  Icons.slow_motion_video:
+                      Icons.lock_outline
+                  ,
+                  size: 90,
+                  color: Colors.grey[400],
+                ),
 
+              ]),
+              // SizedBox(
+              //   height: 4,
+              // ),
+              //
 
-
-        ]),
+              Spacer(),
+                    ]),
+          ),
           type==visitor || widget == "me"?SizedBox() :
           Container(
             width:Responsive.isTab(context)||Responsive.isWeb(context)?
-            type==notOurStudent?100.w :60.w:
+            type==notOurStudent?100.w :110:
             type==notOurStudent?100.w :125.w,
             height:
             Responsive.isTab(context)||Responsive.isWeb(context)?
-            type==notOurStudent?40.h :30.h:
+            type==notOurStudent?40.h :35.h:
             32,
             decoration: BoxDecoration(
                 color:  kColor,

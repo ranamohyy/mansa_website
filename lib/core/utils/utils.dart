@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../devices/mobile/home/course_view.dart';
 import '../../devices/mobile/myProfile/views/charge.dart';
+import '../res/responsive.dart';
 import '../routes/route.dart';
 import 'constans.dart';
 class Utils {
@@ -127,8 +128,22 @@ static String capitalize(String word) {
     }
 
 
+  static double setSizeOfItems(context){
+    final width=MediaQuery.of(context).size.width;
+    if (width>1320){return 0.7/0.6;}
+    else {return 1;}
+  }
+  static   int setCountOfItems(context){
+    final width=MediaQuery.of(context).size.width;
+    if (Responsive.isMob(context)){return 2;}
+    else if(width>=600&&width<740){return 2;}
+    else if (Responsive.isTab(context)){return 3;}
+    else if(width>=1024&&width<1200){return 3;}
+    else {return 4;}
+  }
 
-static void routeInHomeWithAllTypes(String type){
+
+  static void routeInHomeWithAllTypes(String type){
     if (type == ourStudent) {
   AppRouter.navigateTo(CourseView());
   } else if (type == notOurStudent) {
