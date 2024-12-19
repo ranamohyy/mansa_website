@@ -143,9 +143,9 @@ static String capitalize(String word) {
   }
 
 
-  static void routeInHomeWithAllTypes(String type){
+  static void routeInHomeWithAllTypes(String type,title){
     if (type == ourStudent) {
-  AppRouter.navigateTo(CourseView());
+  AppRouter.navigateTo(CourseView(title: title,));
   } else if (type == notOurStudent) {
   AppRouter.navigateTo(const ChargeWallet());
   } else {
