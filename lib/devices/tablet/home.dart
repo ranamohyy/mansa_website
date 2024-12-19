@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/core/utils/constans.dart';
-import '../../views/widgets/CustomHomeForWebWidgetWithIndex0.dart';
+import '../../views/home/CustomHomeForAllDevices.dart';
 import '../../views/widgets/custom_app_bar.dart';
 import '../mobile/myProfile/view.dart';
 
@@ -26,7 +26,7 @@ class TabletHomeView extends StatelessWidget {
             type: type,
           ),
         ),
-        body: CustomHomeForWebWidgetWithIndex0(type: type,)
+        body: CustomHomeForAllDevices(type: type,)
 
     );
   }

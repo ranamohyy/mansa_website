@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/core/routes/route.dart';
+import 'package:mansa/devices/mobile/home/course_view.dart';
 import 'package:mansa/views/auth/login/view.dart';
 import '../../core/utils/constans.dart';
 import '../../core/utils/utils.dart';
 import '../../models/profile_model.dart';
 import '../../views/myProfile/body_my_courses.dart';
-import '../../views/widgets/CustomHomeForWebWidgetWithIndex0.dart';
+import '../../views/home/CustomHomeForAllDevices.dart';
 import '../../views/widgets/custom_item_profile_widget.dart';
 import '../../views/widgets/visitor_view_widget.dart';
 import '../mobile/myProfile/views/aboutApp.dart';
@@ -23,7 +24,7 @@ class WebHomeView extends StatefulWidget {
 class _WebHomeViewState extends State<WebHomeView> {
   int index = 0;
   late List<Widget> views = [
-    CustomHomeForWebWidgetWithIndex0(
+    CustomHomeForAllDevices(
       type: widget.type,
     ),
     const MyAcc(),
@@ -33,7 +34,6 @@ class _WebHomeViewState extends State<WebHomeView> {
     const Suggestions(),
     const Aboutapp(),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +64,9 @@ class _WebHomeViewState extends State<WebHomeView> {
                           });
                         }
                       }))),
+
           Expanded(child: views[index])
+
         ]));
   }
 }

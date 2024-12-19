@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
 import 'package:mansa/views/widgets/item_courses_widget.dart';
-
 import '../../../../core/utils/constans.dart';
 
 class MobileMyCourses extends StatelessWidget {

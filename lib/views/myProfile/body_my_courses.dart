@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/core/utils/constans.dart';
-
 import '../../core/res/responsive.dart';
 import '../../devices/mobile/myProfile/views/myCourses.dart';
-import '../widgets/CustomHomeForWebWidgetWithIndex0.dart';
+import '../home/CustomHomeForAllDevices.dart';
 import '../widgets/app_bar_helper.dart';
 class MyCourses extends StatelessWidget {
   const MyCourses({super.key});
@@ -18,7 +17,7 @@ class MyCourses extends StatelessWidget {
           backgroundColor: Colors.grey[100],
           appBar: Responsive.isTab(context)?const AppBarHelper(text: "courses"):null,
           body:
-          CustomHomeForWebWidgetWithIndex0(type: ourStudent,)
+         const CustomHomeForAllDevices(type: ourStudent,)
       );
     }  }
 }

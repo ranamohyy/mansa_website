@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mansa/views/widgets/CustomHomeForWebWidgetWithIndex0.dart';
+import 'package:mansa/core/utils/constans.dart';
+import 'package:mansa/views/home/CustomHomeForAllDevices.dart';
 import 'package:mansa/views/widgets/custom_app_bar.dart';
 class HomeViewWidget extends StatelessWidget {
  const HomeViewWidget({super.key,required this.type});
@@ -9,8 +10,9 @@ class HomeViewWidget extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: false,
       appBar: const MyAppBar(text: "Home"),
-      backgroundColor: Colors.white,
-      body: CustomHomeForWebWidgetWithIndex0(type: type)
+      backgroundColor:scaffoldBackGroundColor,
+      body: CustomHomeForAllDevices(
+          type: type)
     //   CustomScrollView(
     //     slivers:[SliverPadding(padding: const EdgeInsets.all(8.0),
     //     sliver:
