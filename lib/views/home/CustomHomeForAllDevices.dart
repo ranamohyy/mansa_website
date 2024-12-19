@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../core/utils/utils.dart';
-import 'custom_item_for_courses_to_home_and_courses.dart';
+import '../../models/courses_model.dart';
+import '../widgets/custom_item_for_courses_to_home_and_courses.dart';
 
-class CustomHomeForWebWidgetWithIndex0 extends StatelessWidget {
-  const CustomHomeForWebWidgetWithIndex0({super.key, required this.type});
+class CustomHomeForAllDevices extends StatelessWidget {
+ const CustomHomeForAllDevices({super.key,
+    required this.type});
   final String type;
   @override
   Widget build(BuildContext context) {
@@ -20,10 +21,13 @@ class CustomHomeForWebWidgetWithIndex0 extends StatelessWidget {
         //   ),
         // ),
         CustomItemCoursesForHomeAndCourses(
+          index: 0,
+       itemsCount:  HomeModel.labelOfCourses.length,
           type: type,
-            onTap: () => Utils.routeInHomeWithAllTypes(type)
+
         )
       ],
     );
+
   }
 }
