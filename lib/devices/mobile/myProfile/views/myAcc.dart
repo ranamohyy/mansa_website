@@ -29,7 +29,7 @@ class MyAcc extends StatelessWidget {
       Scaffold(
         backgroundColor: Colors.white,
         appBar:
-        Responsive.isMob(context)?const AppBarHelper(
+        Responsive.isMob(context)||Responsive.isTab(context)?const AppBarHelper(
           text: "Myaccount",
         ):null,
         body:
