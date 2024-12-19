@@ -48,8 +48,8 @@ class _WebHomeViewState extends State<WebHomeView> {
                   itemCount: ProfileModel.tileAndIconComponents.length,
                   itemBuilder: (_, i) => ItemProfileWidget(
                     color: index==i?Colors.white:null,
-                      icon: ProfileModel.tileAndIconComponents.values.elementAt(i),
-                      label: ProfileModel.tileAndIconComponents.keys.elementAt(i),
+                      icon: ProfileModel.tileAndIconComponentsForWeb.values.elementAt(i),
+                      label: ProfileModel.tileAndIconComponentsForWeb.keys.elementAt(i),
                       onTap: () {
                         if (i == 7) {
                           setState(() {
