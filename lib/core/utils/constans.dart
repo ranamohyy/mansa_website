@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 // const kPrimaryColor =Color(0xff4C8613);
 const kSecondColor= Color(0xff1579a1);
+const scaffoldBackGroundColor=Color(0x98ffffff);
 const kColor =Color(0xff06223d);
 const kPrimaryColor =Color(0xff06223d);
 const String ourStudent =
