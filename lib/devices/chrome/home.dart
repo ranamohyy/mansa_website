@@ -11,7 +11,6 @@ import '../../views/widgets/visitor_view_widget.dart';
 import '../mobile/myProfile/views/aboutApp.dart';
 import '../mobile/myProfile/views/charge.dart';
 import '../mobile/myProfile/views/myAcc.dart';
-import '../mobile/myProfile/views/myCourses.dart';
 import '../mobile/myProfile/views/results.dart';
 import '../mobile/myProfile/views/suggestions.dart';
 
