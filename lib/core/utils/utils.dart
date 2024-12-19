@@ -1,5 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../devices/mobile/home/course_view.dart';
+import '../../devices/mobile/myProfile/views/charge.dart';
+import '../routes/route.dart';
+import 'constans.dart';
 class Utils {
   static void show(BuildContext context) {
     showDialog(
@@ -67,47 +72,78 @@ static String capitalize(String word) {
   static double  sizeOfItem(context) {
     final width=MediaQuery.of(context).size.width;
     if(width<=720){
-      return  120.w/ 175.h ;
+      return  190/ 180 ;
 
     }else if(width>720&&width<915){
-      return 120.w/ 200.h ;
-    }else if(width>=915&&width<1024){
-      return 130.w/ 230.h ;
+      print("hiiiiiiiiiiiii");
+      return 190/ 180 ;
+    }else if(width<980){
+      print(width);
+      return 80/ 70 ;
     }else{
-      return 80.w/ 145.h;
+      return 80/ 60;
     }
 
   }
-  static double  sizeOfItemWeb(context) {
+  static double  sizeOfItemCourseForHomeAndCourses(context) {
     final width=MediaQuery.of(context).size.width;
     if(width==1050){
-      return  120.w/ 175.h ;
-
-    // }else if(width>720&&width<915){
-    //   return 120.w/ 200.h ;
-    // }else if(width>=915&&width<1024){
-    //   return 130.w/ 230.h ;
-    }else{
-      return 45.w/ 135;
+      return  120.w/ 175.h ;}
+    if(width>650&&width<700){return 0.5;}
+    //tablet item const ratio 650 -->845
+      else if(width >700&&width<845){
+      return
+          4.w/12.h;
+       }
+    //tablet item const ratio 845 -->1000
+    else if(width >845&&width<1000){
+      return 0.9;}
+    //web item const ratio 1000 -->1080
+    else if(width >=1000&&width<1080){
+      return 0.7;
+    }
+    //web item const ratio 1000 -->1500
+    else  {
+      return 0.1.w/0.35.h;
     }
 
   }
   static double  sizeOfButtonForMyProfileVisitor(context) {
     final width=MediaQuery.of(context).size.width;
     if(width>950&&width<1250){
+      print("iamhere");
       return  240;
     }
     if(width>1250){
+      print("iamhere");
+
       return  290;
     }
       else{
-        return 220;
+      print("iamhere");
+
+      return 220;
     }
     }
 
 
 
+static void routeInHomeWithAllTypes(String type){
+    if (type == ourStudent) {
+  AppRouter.navigateTo(CourseView());
+  } else if (type == notOurStudent) {
+  AppRouter.navigateTo(const ChargeWallet());
+  } else {
+       return ;
+  }
+}
+static  changeLanguage(BuildContext context){
+  final newLocale = context.locale.languageCode == "en"
+      ? const Locale('ar')
+      :const  Locale('en');
+  context.setLocale(newLocale);
 
 
+}
 
 }
