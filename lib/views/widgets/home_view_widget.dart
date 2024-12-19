@@ -32,7 +32,8 @@ class HomeViewWidget extends StatelessWidget {
           height: 10.h,
         ),
               Column(
-                children: List.generate(
+                children:
+                List.generate(
                   HomeModel.labelOfCourses.length,
                   (index) => Padding(
                       padding: EdgeInsets.only(bottom: 10.h),

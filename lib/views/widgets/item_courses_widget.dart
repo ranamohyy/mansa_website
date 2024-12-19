@@ -54,15 +54,14 @@ class ItemCoursesWidget extends StatelessWidget {
 
 
         ]),
-          type==visitor || widget == "me"?SizedBox() :  Container(
+          type==visitor || widget == "me"?SizedBox() :
+          Container(
             width:Responsive.isTab(context)||Responsive.isWeb(context)?
-            type==notOurStudent?40.w :40.w:
+            type==notOurStudent?100.w :60.w:
             type==notOurStudent?100.w :125.w,
-
             height:
             Responsive.isTab(context)||Responsive.isWeb(context)?
-            type==notOurStudent?40.h :40.h:
-
+            type==notOurStudent?40.h :30.h:
             32,
             decoration: BoxDecoration(
                 color:  kColor,
