@@ -1,7 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../core/utils/constans.dart';
 class ItemProfileWidget extends StatelessWidget {
   ItemProfileWidget({super.key,required this.label,required this.onTap,required this.icon,this.color});
