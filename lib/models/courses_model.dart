@@ -1,4 +1,6 @@
-  class HomeModel{
+  import 'package:flutter/cupertino.dart';
+
+class HomeModel{
  static List<String>labelOfCourses= [
    "basics",
    "first Chapter",
@@ -14,9 +16,6 @@
    "الباب الثالث",
    "الباب الرابع",
  ];
-
-
-
 
 
 
