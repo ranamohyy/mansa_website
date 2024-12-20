@@ -1,10 +1,14 @@
 
 import 'package:flutter/material.dart';
 // const kPrimaryColor =Color(0xff1579a1);
-//Color(0x98ffffff)
+//Color(0xffafafa)
 // const kPrimaryColor =Color(0xff4C8613);
+class ColorApp{
+  static Color scaffoldBackGroundColor=Colors.black;
+}
+const Color scaffoldWhiteBackGround=Colors.white;
 const kSecondColor= Color(0xff1579a1);
-const scaffoldBackGroundColor=Colors.white30;
+const Color scaffoldBackGroundColor=Color(0xfff8f5f5);
 const kColor =Color(0xff06223d);
 const kPrimaryColor =Color(0xff06223d);
 const String ourStudent =
