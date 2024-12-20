@@ -19,8 +19,7 @@ class ProfileModel {
   "aboutApp":const FaIcon(FontAwesomeIcons.circleQuestion, color: Color(0xff4EB7F2)),
   "changeLang":const Icon(
   Icons.language,
-  color: Color(0xff4EB7F2),
-  ),
+  color: Color(0xff4EB7F2),),
   "logOut":SvgPicture.asset(AppImage.logout),
 
 
@@ -42,10 +41,7 @@ class ProfileModel {
     "recharge":SvgPicture.asset(AppImage.chargeWallet),
     "FAQ":SvgPicture.asset(AppImage.faq),
     "aboutApp":const FaIcon(FontAwesomeIcons.circleQuestion, color: Color(0xff4EB7F2)),
-    "changeLang":const Icon(
-      Icons.language,
-      color: Color(0xff4EB7F2),
-    ),
+    "changeLang":const Icon(Icons.language, color: Color(0xff4EB7F2),),
     "logOut":SvgPicture.asset(AppImage.logout),
 
 
