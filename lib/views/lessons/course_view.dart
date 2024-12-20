@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mansa/core/routes/route.dart';
 import 'package:mansa/core/utils/constans.dart';
-import 'package:mansa/devices/mobile/home/course_details.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
 import 'package:mansa/views/widgets/custom_item_for_courses_to_home_and_courses.dart';
-import '../../../models/lessons_model.dart';
+import '../../models/lessons_model.dart';
 
 class CourseView extends StatelessWidget {
  const CourseView({super.key,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mansa/core/utils/constans.dart';
 import '../../views/home/CustomHomeForAllDevices.dart';
 import '../../views/widgets/custom_app_bar.dart';
-import '../mobile/myProfile/view.dart';
+import '../mobile/profile.dart';
 
 class TabletHomeView extends StatelessWidget {
   const TabletHomeView({super.key, required this.type});

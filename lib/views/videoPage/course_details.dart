@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mansa/core/utils/constans.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
-import '../auth/widgets/custom_video_icon.dart';
-import '../auth/widgets/text_auth.dart';
+import '../widgets2/custom_video_icon.dart';
+import '../widgets2/text_auth.dart';
 class CourseDetailsView extends StatelessWidget {
   const CourseDetailsView({super.key,
     required this.cousreLable,
@@ -16,7 +16,7 @@ class CourseDetailsView extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return  Scaffold(
-      backgroundColor: Colors.white30,
+      backgroundColor:scaffoldBackGroundColor,
       appBar:const AppBarHelper(text:"" ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

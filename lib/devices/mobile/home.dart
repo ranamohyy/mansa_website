@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/views/widgets/home_view_widget.dart';
-import '../../../views/widgets/custom_nav_bar.dart';
-import '../myProfile/view.dart';
+import '../../views/widgets/custom_nav_bar.dart';
+import 'profile.dart';
 class HomeMobileView extends StatefulWidget {
    const HomeMobileView({super.key,required this.type});
 final String type;

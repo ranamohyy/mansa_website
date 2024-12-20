@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/core/routes/route.dart';
-import 'package:mansa/devices/mobile/home/course_view.dart';
 import 'package:mansa/views/auth/login/view.dart';
 import '../../core/utils/constans.dart';
 import '../../core/utils/utils.dart';
 import '../../models/profile_model.dart';
-import '../../views/myProfile/body_my_courses.dart';
+import '../../views/myProfile/views/aboutApp.dart';
+import '../../views/myProfile/views/charge.dart';
+import '../../views/myProfile/views/myAcc.dart';
+import '../../views/myProfile/views/my_courses.dart';
 import '../../views/home/CustomHomeForAllDevices.dart';
+import '../../views/myProfile/views/results.dart';
+import '../../views/myProfile/views/suggestions.dart';
 import '../../views/widgets/custom_item_profile_widget.dart';
 import '../../views/widgets/visitor_view_widget.dart';
-import '../mobile/myProfile/views/aboutApp.dart';
-import '../mobile/myProfile/views/charge.dart';
-import '../mobile/myProfile/views/myAcc.dart';
-import '../mobile/myProfile/views/results.dart';
-import '../mobile/myProfile/views/suggestions.dart';
-
 class WebHomeView extends StatefulWidget {
  const WebHomeView({super.key, required this.type});
   final String type;

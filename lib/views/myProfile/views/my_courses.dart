@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/core/utils/constans.dart';
-import '../../core/res/responsive.dart';
-import '../home/CustomHomeForAllDevices.dart';
-import '../widgets/app_bar_helper.dart';
+import '../../../core/res/responsive.dart';
+import '../../home/CustomHomeForAllDevices.dart';
+import '../../widgets/app_bar_helper.dart';
 class MyCourses extends StatelessWidget {
   const MyCourses({super.key});
 

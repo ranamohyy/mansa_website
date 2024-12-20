@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mansa/core/res/responsive.dart';
 import '../../core/utils/constans.dart';
-import '../../devices/mobile/auth/widgets/logo_name_app.dart';
-import '../../devices/mobile/auth/widgets/text_auth.dart';
-
+import '../widgets2/logo_name_app.dart';
+import '../widgets2/text_auth.dart';
 class ItemCoursesWidget extends StatelessWidget {
   const ItemCoursesWidget({super.key,
     this.height,this.width,
@@ -39,7 +38,7 @@ class ItemCoursesWidget extends StatelessWidget {
               // SizedBox(
               //   height: 8.h,
               // ),
-              Spacer(),
+              const Spacer(),
               Stack(alignment: Alignment.center, children: [
                 const LogoOfAppWidget(),
                 Icon(
@@ -57,10 +56,10 @@ class ItemCoursesWidget extends StatelessWidget {
               // ),
               //
 
-              Spacer(),
+              const Spacer(),
                     ]),
           ),
-          type==visitor || widget == "me"?SizedBox() :
+          type==visitor || widget == "me"?const SizedBox() :
           Container(
             width:Responsive.isTab(context)||Responsive.isWeb(context)?
             type==notOurStudent?100.w :110:

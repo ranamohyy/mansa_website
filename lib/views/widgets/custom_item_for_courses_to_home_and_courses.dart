@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mansa/devices/mobile/home/course_view.dart';
+import 'package:mansa/views/lessons/course_view.dart';
 import 'package:mansa/models/lessons_model.dart';
 import '../../core/routes/route.dart';
 import '../../core/utils/utils.dart';
-import '../../devices/mobile/home/course_details.dart';
+import '../videoPage/course_details.dart';
 import '../../models/courses_model.dart';
 import 'item_courses_widget.dart';
 

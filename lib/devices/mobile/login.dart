@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../views/auth/login/body_login.dart';
+import '../../views/auth/login/body_login.dart';
 class MobileLoginView extends StatefulWidget {
  const MobileLoginView({super.key,});
   @override

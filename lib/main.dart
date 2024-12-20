@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mansa/core/routes/route.dart';
 import 'package:mansa/core/utils/constans.dart';
-=import 'package:mansa/views/home/home.dart';
+import 'package:mansa/views/home/home.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();

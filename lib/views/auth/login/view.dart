@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mansa/devices/chrome/login.dart';
 import 'package:mansa/devices/tablet/login.dart';
 import '../../../core/res/responsive.dart';
-import '../../../devices/mobile/auth/login/view.dart';
+import '../../../devices/mobile/login.dart';
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
   @override

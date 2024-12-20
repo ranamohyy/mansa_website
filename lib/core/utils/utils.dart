@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../devices/mobile/home/course_view.dart';
-import '../../devices/mobile/myProfile/views/charge.dart';
+import '../../views/lessons/course_view.dart';
+import '../../views/myProfile/views/charge.dart';
 import '../res/responsive.dart';
 import '../routes/route.dart';
 import 'constans.dart';

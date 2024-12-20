@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/helpers/custom_my_input.dart';
 import '../../../core/utils/constans.dart';
-import '../../../devices/mobile/auth/widgets/logo_name_app.dart';
-import '../../../devices/mobile/auth/widgets/text_auth.dart';
 import '../../widgets/custom_button_for_devices.dart';
 import '../../widgets/custom_logo_for_devices_in_auth.dart';
+import '../../widgets2/text_auth.dart';
 class BodyForgetPassword extends StatefulWidget {
   const BodyForgetPassword({
     super.key,

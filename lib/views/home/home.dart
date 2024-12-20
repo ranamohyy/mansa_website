@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../core/res/responsive.dart';
 import '../../devices/chrome/home.dart';
-import '../../devices/mobile/home/view.dart';
+import '../../devices/mobile/home.dart';
 import '../../devices/tablet/home.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key, required this.type});

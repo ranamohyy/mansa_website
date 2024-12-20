@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mansa/core/res/responsive.dart';
 import 'package:mansa/core/utils/constans.dart';
-import 'package:mansa/devices/mobile/auth/widgets/text_auth.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
+
+import '../../widgets2/text_auth.dart';
 class Aboutapp extends StatelessWidget {
   const Aboutapp({super.key});
 

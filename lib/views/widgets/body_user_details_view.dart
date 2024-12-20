@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mansa/views/widgets/custom_button_for_devices.dart';
 import '../../core/helpers/custom_my_input.dart';
-import '../../devices/mobile/auth/widgets/text_auth.dart';
+import '../widgets2/text_auth.dart';
 class BodyUserDetailsView extends StatefulWidget {
    BodyUserDetailsView({super.key,this.widthOfButton,
      this.crossAxisAlignment,this.mainAxisAlignment});

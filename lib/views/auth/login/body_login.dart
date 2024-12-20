@@ -3,12 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/helpers/custom_my_input.dart';
 import '../../../core/routes/route.dart';
 import '../../../core/utils/constans.dart';
-import '../../../devices/mobile/auth/widgets/donot_have_account.dart';
-import '../../../devices/mobile/auth/widgets/forget_password.dart';
-import '../../../devices/mobile/auth/widgets/text_auth.dart';
 import '../../home/home.dart';
 import '../../widgets/custom_button_for_devices.dart';
 import '../../widgets/custom_logo_for_devices_in_auth.dart';
+import '../../widgets2/donot_have_account.dart';
+import '../../widgets2/forget_password.dart';
+import '../../widgets2/text_auth.dart';
 
 class BodyLoginView extends StatefulWidget {
   const BodyLoginView({

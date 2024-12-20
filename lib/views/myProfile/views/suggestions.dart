@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mansa/core/helpers/custom_button.dart';
 import 'package:mansa/core/helpers/custom_my_input.dart';
 import 'package:mansa/core/utils/constans.dart';
-import 'package:mansa/devices/mobile/auth/widgets/text_auth.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
-
 import '../../../../core/res/responsive.dart';
 import '../../../../views/widgets/custom_button_for_devices.dart';
+import '../../widgets2/text_auth.dart';
 class Suggestions extends StatelessWidget {
   const Suggestions({super.key});
 

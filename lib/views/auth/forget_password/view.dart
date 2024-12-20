@@ -2,7 +2,7 @@ import 'package:mansa/core/res/responsive.dart';
 import 'package:flutter/material.dart';
 
 import '../../../devices/chrome/forgetPassword.dart';
-import '../../../devices/mobile/auth/forget_password/view.dart';
+import '../../../devices/mobile/forget_password.dart';
 import '../../../devices/tablet/forget_password.dart';
 
 class ForgetPassword extends StatelessWidget {

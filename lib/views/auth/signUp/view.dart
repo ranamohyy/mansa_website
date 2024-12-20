@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mansa/core/res/responsive.dart';
 import 'package:mansa/devices/tablet/signUp.dart';
 import '../../../devices/chrome/signUp.dart';
-import '../../../devices/mobile/auth/signUp/view.dart';
+import '../../../devices/mobile/signUp.dart';
 class SignupView extends StatefulWidget {
   const SignupView({super.key});
   @override
