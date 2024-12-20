@@ -44,7 +44,7 @@ class _WebHomeViewState extends State<WebHomeView> {
               backgroundColor: Colors.grey[100],
               child: widget.type==visitor?const VisitorViewWidget():
               ListView.builder(
-                  itemCount: ProfileModel.tileAndIconComponents.length,
+                  itemCount: ProfileModel.tileAndIconComponentsForWeb.length,
                   itemBuilder: (_, i) => ItemProfileWidget(
                     color: index==i?Colors.white:null,
                       icon: ProfileModel.tileAndIconComponentsForWeb.values.elementAt(i),
@@ -57,7 +57,7 @@ class _WebHomeViewState extends State<WebHomeView> {
                         }
                         if (i == 8) {
                           AppRouter.navigateAndRemoveAll(const LoginView());
-                        } else if (i < ProfileModel.screens.length) {
+                        } else if (i < views.length) {
                           setState(() {
                             index = i;
                             // index++;

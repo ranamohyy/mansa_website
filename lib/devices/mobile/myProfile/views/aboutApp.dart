@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mansa/core/res/responsive.dart';
 import 'package:mansa/core/utils/constans.dart';
 import 'package:mansa/devices/mobile/auth/widgets/text_auth.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
@@ -10,18 +11,19 @@ class Aboutapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.white,
-      appBar:AppBarHelper(text: "aboutApp"),
+      appBar:
+      Responsive.isWeb(context)?null:
+      const AppBarHelper(text: "aboutApp"),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Expanded(
-              child:
-              TextAuth(
-                  style: kTextStyle11grey.copyWith(fontSize: 15.sp),
-                  text: "هذا التطبيق هنا لمساعدتك لمزاكرة و فهم ماده الكيمياء مع الأستاد احمد الدجلة و متابعة مستواك مع وجود امتحانات للمتابعة."
-                  ),
-            )
+            TextAuth(
+                style: kTextStyle11grey.copyWith(fontSize: 17),
+                text: "هذا التطبيق هنا لمساعدتك لمزاكرة و فهم ماده الكيمياء مع الأستاد احمد الدجلة و متابعة مستواك مع وجود امتحانات للمتابعة."
+                )
           ],
         ),
       ),
