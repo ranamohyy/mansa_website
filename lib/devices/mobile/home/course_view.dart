@@ -4,30 +4,26 @@ import 'package:mansa/core/utils/constans.dart';
 import 'package:mansa/devices/mobile/home/course_details.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
 import 'package:mansa/views/widgets/custom_item_for_courses_to_home_and_courses.dart';
-import '../../../models/courses_model.dart';
 import '../../../models/lessons_model.dart';
 
 class CourseView extends StatelessWidget {
-  CourseView({super.key,required this.title});
+ const CourseView({super.key,
+   required this.title,});
 final String title;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: scaffoldBackGroundColor,
         appBar: AppBarHelper(
             text:title
-
         ),
         body:CustomScrollView(slivers: [
         CustomItemCoursesForHomeAndCourses(
+          interScreen: "courses",
     itemsCount:LessonsModel.labels.length ,
     type: ourStudent,
     index: 1,
-    onTap: ()=> AppRouter.navigateTo(
-    CourseDetailsView(
-    cousreLable: LessonsModel.labels[0],
-    details: LessonsModel.captions[0]
-    ))
+
     )
 
    ]) );

@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:mansa/devices/mobile/home/course_view.dart';
 import 'package:mansa/models/lessons_model.dart';
+import '../../core/routes/route.dart';
 import '../../core/utils/utils.dart';
+import '../../devices/mobile/home/course_details.dart';
 import '../../models/courses_model.dart';
 import 'item_courses_widget.dart';
 
 class CustomItemCoursesForHomeAndCourses extends StatelessWidget {
-   CustomItemCoursesForHomeAndCourses(
-      {super.key,required this.index,this.onTap,
+   const CustomItemCoursesForHomeAndCourses(
+      {super.key,required this.index,required this.interScreen,
         required this.type,required this.itemsCount});
+   final String interScreen;
  final  int itemsCount;
   final String type;
-  void Function()? onTap;
  final  int index;
   @override
   Widget build(BuildContext context) {
@@ -28,10 +31,24 @@ class CustomItemCoursesForHomeAndCourses extends StatelessWidget {
             childCount:itemsCount,
             (context, i) {
               return GestureDetector(
-            onTap: () =>onTap?? Utils.routeInHomeWithAllTypes(type,
-                 HomeModel.labelOfCourses[i]
 
-            ),
+                  onTap:(){
+                  if(interScreen=='courses'){
+                    AppRouter.navigateTo(
+                        CourseDetailsView(
+                            cousreLable: LessonsModel.labels[i],
+                            details: LessonsModel.captions[i]
+                        ));
+
+                  }
+                  else if(interScreen=="myCourses"){
+                     AppRouter.navigateTo(CourseView(title: HomeModel.labelOfCourses[i]));
+
+                  }
+                  else {
+                Utils.routeInHomeWithAllTypes(type,
+                 HomeModel.labelOfCourses[i],);
+                }},
                 child: ItemCoursesWidget(
                   labels:
                   labels(index,i),
@@ -43,7 +60,6 @@ class CustomItemCoursesForHomeAndCourses extends StatelessWidget {
         ));
   }
   String labels(index,i){
-    print("==========${index}");
     //labels for home
     if(index==0){
       return HomeModel.labelOfCourses[i];
