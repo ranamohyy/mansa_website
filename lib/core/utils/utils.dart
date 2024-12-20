@@ -143,7 +143,7 @@ static String capitalize(String word) {
   }
 
 
-  static void routeInHomeWithAllTypes(String type,title){
+  static void routeInHomeWithAllTypes(String type,String title){
     if (type == ourStudent) {
   AppRouter.navigateTo(CourseView(title: title,));
   } else if (type == notOurStudent) {
