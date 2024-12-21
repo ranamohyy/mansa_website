@@ -5,6 +5,7 @@ import '../../../core/helpers/custom_my_input.dart';
 import '../../../core/utils/constans.dart';
 import '../../widgets/custom_button_for_devices.dart';
 import '../../widgets/custom_logo_for_devices_in_auth.dart';
+import '../../widgets2/already_have_account.dart';
 import '../../widgets2/text_auth.dart';
 class BodyForgetPassword extends StatefulWidget {
   const BodyForgetPassword({
@@ -59,6 +60,9 @@ class _BodyLoginViewState extends State<BodyForgetPassword> {
             width: widget.buttonWidth!,
             text: "Submit",
           ),
+          SizedBox(height: height * 0.03),
+
+          AlreadyHaveAccountWidget(type: '',)
         ],
       ),
     );

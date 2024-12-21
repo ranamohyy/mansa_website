@@ -6,14 +6,15 @@ import 'package:mansa/views/auth/login/view.dart';
 import '../../../../core/utils/constans.dart';
 
 class AlreadyHaveAccountWidget extends StatelessWidget {
-  const AlreadyHaveAccountWidget({super.key});
+  final String type;
+  const AlreadyHaveAccountWidget({super.key,required this.type});
   @override
   Widget build(BuildContext context) {
     return Center(
       child: RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
-          text: "Already have an account ?".tr(),
+          text:type=='signUp'? "Already have an account ?".tr():"العودة الي",
           style: kTextStyle11grey.copyWith(fontSize: 14),
           children: [
             WidgetSpan(

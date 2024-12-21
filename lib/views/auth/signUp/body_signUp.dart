@@ -106,7 +106,7 @@ class _BodyLoginViewState extends State<BodySignup> {
             text: "Create Account",
           ),
           gapButton,
-          const AlreadyHaveAccountWidget()
+          const AlreadyHaveAccountWidget(type: 'signUp',)
         ],
       ),
     );
