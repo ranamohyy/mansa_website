@@ -28,7 +28,7 @@ class ProfileModel {
     const MyAcc(),
     const MyCourses(),
     Results(),
-    const ChargeWallet(),
+    const ChargeWallet(type: '',),
     const Suggestions(),
     const Aboutapp(),
 
