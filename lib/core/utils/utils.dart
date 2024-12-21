@@ -112,16 +112,13 @@ static String capitalize(String word) {
   static double  sizeOfButtonForMyProfileVisitor(context) {
     final width=MediaQuery.of(context).size.width;
     if(width>950&&width<1250){
-      print("iamhere");
       return  240;
     }
     if(width>1250){
-      print("iamhere");
 
-      return  290;
+      return  290.w;
     }
       else{
-      print("iamhere");
 
       return 220;
     }
@@ -147,7 +144,7 @@ static String capitalize(String word) {
     if (type == ourStudent) {
   AppRouter.navigateTo(CourseView(title: title,));
   } else if (type == notOurStudent) {
-  AppRouter.navigateTo(const ChargeWallet());
+  AppRouter.navigateTo(const ChargeWallet(type: 'type',));
   } else {
        return ;
   }
