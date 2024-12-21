@@ -63,7 +63,7 @@ class ItemCoursesWidget extends StatelessWidget {
           Container(
             width:Responsive.isTab(context)||Responsive.isWeb(context)?
             type==notOurStudent?100.w :110:
-            type==notOurStudent?100.w :125.w,
+            type==notOurStudent?100.w :80.w,
             height:
             Responsive.isTab(context)||Responsive.isWeb(context)?
             type==notOurStudent?40.h :35.h:

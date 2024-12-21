@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mansa/core/utils/constans.dart';
 import '../../models/courses_model.dart';
 import '../widgets/custom_item_for_courses_to_home_and_courses.dart';
 

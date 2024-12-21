@@ -3,8 +3,8 @@ import 'package:mansa/views/lessons/course_view.dart';
 import 'package:mansa/models/lessons_model.dart';
 import '../../core/routes/route.dart';
 import '../../core/utils/utils.dart';
-import '../videoPage/course_details.dart';
 import '../../models/courses_model.dart';
+import '../videoPage/course_details.dart';
 import 'item_courses_widget.dart';
 
 class CustomItemCoursesForHomeAndCourses extends StatelessWidget {
@@ -36,7 +36,7 @@ class CustomItemCoursesForHomeAndCourses extends StatelessWidget {
                   if(interScreen=='courses'){
                     AppRouter.navigateTo(
                         CourseDetailsView(
-                            cousreLable: LessonsModel.labels[i],
+                            courseLabel: LessonsModel.labels[i],
                             details: LessonsModel.captions[i]
                         ));
 

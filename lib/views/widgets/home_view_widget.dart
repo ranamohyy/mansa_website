@@ -13,47 +13,6 @@ class HomeViewWidget extends StatelessWidget {
       backgroundColor:scaffoldBackGroundColor,
       body: CustomHomeForAllDevices(
           type: type)
-    //   CustomScrollView(
-    //     slivers:[SliverPadding(padding: const EdgeInsets.all(8.0),
-    //     sliver:
-    //     SliverFillRemaining(
-    //       child: Column(
-    //           crossAxisAlignment: CrossAxisAlignment.start,
-    //           children: [
-    //           const HeaderWidget(),
-    //       SizedBox(
-    //         height: 10.h,
-    //       ),
-    //             Column(
-    //               children:
-    //               List.generate(
-    //                 HomeModel.labelOfCourses.length,
-    //                 (index) => Padding(
-    //                     padding: EdgeInsets.only(bottom: 10.h),
-    //                     child: GestureDetector(
-    //                       onTap: (){
-    //                         if(type==ourStudent){
-    //                           AppRouter.navigateTo(
-    //                             CourseView(
-    //
-    //                             )
-    //                         );
-    //                       }else if (type == notOurStudent){
-    //                           AppRouter.navigateTo(const ChargeWallet());
-    //                         }
-    //                         else {return;}
-    //                         },
-    //                       child: ItemCoursesWidget(
-    //                           type: type,
-    //                           labels: HomeModel.labelOfCourses[index]),
-    //                     )),
-    //               ),
-    //             ),
-    //           ],
-    //         ),
-    //     ),
-    //     ),]
-    // )
       );
   }
 }
