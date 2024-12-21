@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mansa/core/assets.dart';
-import 'package:mansa/core/helpers/custom_button.dart';
 import 'package:mansa/core/helpers/custom_my_input.dart';
 import 'package:mansa/core/res/responsive.dart';
 import 'package:mansa/core/routes/route.dart';
@@ -10,17 +9,19 @@ import 'package:mansa/views/home/home.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
 import 'package:mansa/views/widgets/custom_button_for_devices.dart';
 class ChargeWallet extends StatelessWidget {
-  const ChargeWallet({super.key});
+  final String type;
+  const ChargeWallet({super.key,required this.type});
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.white,
-      appBar: Responsive.isWeb(context)?null:const AppBarHelper(text: "المحفظة"),
+      appBar: Responsive.isWeb(context)&&type=='web'?null: const AppBarHelper(text: "المحفظة"),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
+            // Responsive.isWeb(context)&&type=='web'?BackButton():SizedBox(),
             AspectRatio(
                 aspectRatio: 0.04/0.007,
                 child: Image.asset(AppImage.fawry,)),
