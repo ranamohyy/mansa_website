@@ -71,7 +71,7 @@ const kTextStyle15grey = TextStyle(
   fontSize: 15,
   fontWeight: FontWeight.bold,
 
-  color: Colors.red
+  color: Colors.grey
 
 );
 const kTextStyle24 = TextStyle(
