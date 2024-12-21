@@ -13,7 +13,7 @@ class Suggestions extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: scaffoldBackGroundColor,
-      appBar:const  AppBarHelper(text: "FAQ"),
+      appBar:Responsive.isWeb(context)?null:const  AppBarHelper(text: "FAQ"),
       body: SingleChildScrollView(
         child: Padding(
           padding:  EdgeInsets.symmetric(horizontal: 8.w,vertical: 30.h),

@@ -5,10 +5,8 @@ class CustomVideoIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Icon(
-
-    Icons.slow_motion_video,
-
-    size: 90,
+      Icons.slow_motion_video,
+      size: 90,
     color: Colors.grey[400],
     );
 
