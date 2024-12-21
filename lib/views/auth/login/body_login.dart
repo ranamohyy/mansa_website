@@ -39,70 +39,71 @@ class _BodyLoginViewState extends State<BodyLoginView> {
     final gapButton = SizedBox(height: 15.h);
     return Form(
       key: _key,
-      child: Column(
-        mainAxisAlignment: widget.mainAxisAlignment ?? MainAxisAlignment.center,
-        crossAxisAlignment:
-            widget.crossAxisAlignment ?? CrossAxisAlignment.stretch,
-        children: [
-          gapButton,
-          CustomLogoForDevices(
-            aspectRatio: widget.aspectRatio!,
-          ),
-          TextAuth(text: "full name"),
-          space,
-          MyInput(
-            text: "your full name",
-            enabled: true,
-          ),
-          gap,
-          TextAuth(text: "code"),
-          space,
-          MyInput(
-            onTap: FocusScope.of(context).unfocus,
-            keyboardType: TextInputType.number,
-            validator: (v) {
-              if (v == null || v.isEmpty) {
-                return;
-              }
-            },
-            text: 'code(with us)',
-            controller: _idController,
-          ),
-          gap,
-          TextAuth(text: "Password"),
-          space,
-          MyInput(
-            text: 'Password ',
-            controller: _passwordController,
-          ),
-          const ForgetPasswordWidget(),
-          CustomButtonForDevices(
-            onPressed: () {
-              _idController.text.isEmpty
-                  ? AppRouter.navigateAndRemoveAll(const HomePage(
-                      type: notOurStudent,
-                    ))
-                  : AppRouter.navigateAndRemoveAll(const HomePage(
-                      type: ourStudent,
-                    ));
-            },
-            width: widget.buttonWidth!,
-            text: "Login",
-          ),
-          gapButton,
-          CustomButtonForDevices(
-            color: kSecondColor,
-            width: widget.buttonWidth!,
-            text: "newVisitor",
-            onPressed: () {
-              AppRouter.navigateAndRemoveAll(const HomePage(
-                type: visitor,
-              ));
-            },
-          ),
-          gap,
-          const DoNotHaveAccountWidget()
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: widget.mainAxisAlignment ?? MainAxisAlignment.center,
+          crossAxisAlignment:
+              widget.crossAxisAlignment ?? CrossAxisAlignment.stretch,
+          children: [
+            gapButton,
+            CustomLogoForDevices(
+              aspectRatio: widget.aspectRatio!,
+            ),
+            TextAuth(text: "full name"),
+            space,
+            MyInput(
+              text: "your full name",
+              enabled: true,
+            ),
+            gap,
+            TextAuth(text: "code"),
+            space,
+            MyInput(
+              keyboardType: TextInputType.number,
+              validator: (v) {
+                if (v == null || v.isEmpty) {
+                  return;
+                }
+              },
+              text: 'code(with us)',
+              controller: _idController,
+            ),
+            gap,
+            TextAuth(text: "Password"),
+            space,
+            MyInput(
+              text: 'Password ',
+              controller: _passwordController,
+            ),
+            const ForgetPasswordWidget(),
+            CustomButtonForDevices(
+              onPressed: () {
+                _idController.text.isEmpty
+                    ? AppRouter.navigateAndRemoveAll(const HomePage(
+                        type: notOurStudent,
+                      ))
+                    : AppRouter.navigateAndRemoveAll(const HomePage(
+                        type: ourStudent,
+                      ));
+              },
+              width: widget.buttonWidth!,
+              text: "Login",
+            ),
+            gapButton,
+            CustomButtonForDevices(
+              color: kSecondColor,
+              width: widget.buttonWidth!,
+              text: "newVisitor",
+              onPressed: () {
+                AppRouter.navigateAndRemoveAll(const HomePage(
+                  type: visitor,
+                ));
+              },
+            ),
+            gap,
+            const DoNotHaveAccountWidget()
+          ],
+        ),
       ),
     );
   }
