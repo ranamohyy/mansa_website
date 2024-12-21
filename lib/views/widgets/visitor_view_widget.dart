@@ -24,7 +24,8 @@ class VisitorViewWidget extends StatelessWidget {
             height: 40.h,
             width:Responsive.isMob(context)?200.w:Utils.sizeOfButtonForMyProfileVisitor(context),
             child: MyButton(
-              onPressed: (){AppRouter.navigateAndRemoveAll(const SignupView());},
+              onPressed: (){
+                AppRouter.navigateAndRemoveAll(const SignupView());},
               child: const Text(
                 "noData",style: kTextStyle14White,
               ).tr(),
