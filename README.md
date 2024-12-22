@@ -1,6 +1,12 @@
 ## E-Learning Chemistry Platform for Third Secondary Students
 
 This e-learning platform is specifically designed for third secondary students, offering all the resources needed to study chemistry. The platform provides a straightforward interface where students can access a wide range of study materials, including PDFs, videos, interactive content, quizzes, and revisions.
+
+
+https://github.com/user-attachments/assets/c446137f-40c3-4044-9d35-4dfaa1b31618
+
+
+
 ### screen shots
 ## Mobile and total screens
 <p align="start">
