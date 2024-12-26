@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mansa/views/home/home.dart';
 import '../../views/lessons/course_view.dart';
 import '../../views/myProfile/views/charge.dart';
 import '../res/responsive.dart';
@@ -149,11 +150,12 @@ static String capitalize(String word) {
        return ;
   }
 }
-static  changeLanguage(BuildContext context){
+static  changeLanguage(BuildContext context,type){
   final newLocale = context.locale.languageCode == "en"
       ? const Locale('ar')
       :const  Locale('en');
   context.setLocale(newLocale);
+  AppRouter.navigateTo(HomePage(type: type));
 
 
 }

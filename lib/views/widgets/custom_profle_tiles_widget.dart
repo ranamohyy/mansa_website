@@ -30,7 +30,7 @@ class _CustomProfileWidgetState extends State<CustomProfileWidget> {
               onTap: () {
                 if (index == 6) {
                   setState(() {
-                    Utils.changeLanguage(context);
+                    Utils.changeLanguage(context,widget.type);
                   });
                 }
                 if (index == 7) {

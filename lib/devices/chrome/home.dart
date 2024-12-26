@@ -50,7 +50,7 @@ class _WebHomeViewState extends State<WebHomeView> {
                       onTap: () {
                         if (i == 7) {
                           setState(() {
-                            Utils.changeLanguage(context);
+                            Utils.changeLanguage(context,widget.type);
                           });
                         }
                         if (i == 8) {
