@@ -10,7 +10,8 @@ class VideoScreen extends StatelessWidget {
     final web =Responsive.isWeb(context);
     return Center(
       child: CustomVideoPlayer(
-        videoUrl: "assets/images/s7.mp4",
+        // videoUrl: "assets/images/s7.mp4",
+        videoUrl: "assets/images/video_test.mp4",
                       height:web?400: 300,
                       width:web?1000: 600,
         ),

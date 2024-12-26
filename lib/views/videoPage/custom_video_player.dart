@@ -79,8 +79,8 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
             ),
         ):
 
-    Center(
-      child: const SizedBox(
+  const  Center(
+      child:  SizedBox(
         child: CircularProgressIndicator(),
       ),
     );

@@ -4,7 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mansa/core/routes/route.dart';
 import 'package:mansa/core/utils/constans.dart';
+import 'package:mansa/views/auth/login/view.dart';
 import 'package:mansa/views/home/home.dart';
+import 'package:mansa/views/videoPage/course_details.dart';
+import 'package:mansa/views/videoPage/view.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
@@ -72,7 +75,8 @@ class MyApp extends StatelessWidget {
               seedColor: Colors.red),
           useMaterial3: true,
         ),
-        home:  const HomePage(type: ourStudent) ,
+        home: VideoScreen(),
+        // HomePage(type: ourStudent) ,
 
             // HomePage(type: ourStudent) ,
       ),
