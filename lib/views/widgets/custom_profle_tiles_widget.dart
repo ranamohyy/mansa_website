@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/core/routes/route.dart';
+import 'package:mansa/core/utils/constans.dart';
 import 'package:mansa/models/profile_model.dart';
 import 'package:mansa/views/auth/login/view.dart';
 import '../../core/utils/utils.dart';
@@ -34,6 +35,18 @@ class _CustomProfileWidgetState extends State<CustomProfileWidget> {
                   });
                 }
                 if (index == 7) {
+                  // showDialog(context: context,
+                  //   builder: (context) =>
+                    // AlertDialog(title: Text("تأكيد الخروج "),
+                    // content: const Text("هل تريد تأكيد الخروج؟"),
+                    //   actions: [
+                    //     TextButton(
+                    //         onPressed: (){AppRouter.pop();}, child:const  Text("لأ")),
+                    //     TextButton(onPressed: (){
+                    //       AppRouter.navigateAndRemoveAll(const LoginView());
+                    //     }, child: const Text("نعم"))
+                    //   ],
+                    // ));
                   AppRouter.navigateAndRemoveAll(const LoginView());
                 }
                 else if (index < ProfileModel.screens.length) {
