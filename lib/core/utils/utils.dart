@@ -128,6 +128,8 @@ static String capitalize(String word) {
 
   static double setSizeOfItems(context){
     final width=MediaQuery.of(context).size.width;
+    if (width>300&&width<500){return 0.7;}
+
     if (width>1320){return 0.7/0.6;}
     else {return 1;}
   }
@@ -141,22 +143,31 @@ static String capitalize(String word) {
   }
 
 
-  static void routeInHomeWithAllTypes(String type,String title){
+  static void routeInHomeWithAllTypes(String type,String title,int index){
     if (type == ourStudent) {
   AppRouter.navigateTo(CourseView(title: title,));
   } else if (type == notOurStudent) {
-  AppRouter.navigateTo(const ChargeWallet(type: 'type',));
+  AppRouter.navigateTo( ChargeWallet(type: 'type',selectedItem: index,));
   } else {
        return ;
   }
 }
-static  changeLanguage(BuildContext context,type){
+static  changeLanguage(BuildContext context,type)async{
   final newLocale = context.locale.languageCode == "en"
       ? const Locale('ar')
       :const  Locale('en');
-  context.setLocale(newLocale);
-  AppRouter.navigateTo(HomePage(type: type));
+  await context.setLocale(newLocale);
+ //  Future.delayed(Duration(seconds: 4));
+ await AppRouter.navigateTo(HomePage(type: type));
 
+
+}
+static void changeText(numberItem){
+    if(numberItem==0){
+      Text("شراء الكورس");
+    }else {
+       Text("الدخول للكورس");
+    }
 
 }
 
