@@ -8,7 +8,6 @@ class MyCourses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(scaffoldBackGroundColor.runtimeType);
     //لما اخد العدد من api هستخدم دا
     //CustomScrollView(slivers: [
     //           CustomItemCoursesForHomeAndCourses(
