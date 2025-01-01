@@ -143,11 +143,11 @@ static String capitalize(String word) {
   }
 
 
-  static void routeInHomeWithAllTypes(String type,String title,int index){
-    if (type == ourStudent) {
+  static void routeInHomeWithAllTypes(String type,String title,int index,chargeStatus){
+    if (type == ourStudent||chargeStatus==true) {
   AppRouter.navigateTo(CourseView(title: title,));
   } else if (type == notOurStudent) {
-  AppRouter.navigateTo( ChargeWallet(type: 'type',selectedItem: index,));
+  AppRouter.navigateTo( ChargeWallet(type: 'type',selectedItem: index,interScreen: 'buyCourse',));
   } else {
        return ;
   }
