@@ -9,8 +9,9 @@ class ColorApp{
 const Color scaffoldWhiteBackGround=Colors.white;
 const kSecondColor= Color(0xff1579a1);
 const Color scaffoldBackGroundColor=Color(0xfff8f5f5);
-const kColor =Color(0xff06223d);
-const kPrimaryColor =Color(0xff06223d);
+const kColor =Color(0xff9e297b);
+// const kPrimaryColor =Color(0xff06223d);
+const kPrimaryColor =Color(0xff9e297b);
 const String ourStudent =
     "ourStudent";
 const String visitor ="visitor";
@@ -57,6 +58,7 @@ const kTextStyle15 = TextStyle(
 );
 const kTextStyle15bold = TextStyle(
   color: Color((0xff06223d),),
+  // color: Color(0xff9e297b),
   fontWeight: FontWeight.bold,
   fontSize: 16, // You can adjust the font size
 );
