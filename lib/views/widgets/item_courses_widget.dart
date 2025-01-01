@@ -2,20 +2,25 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mansa/core/res/responsive.dart';
+import '../../core/helpers/changes.dart';
 import '../../core/utils/constans.dart';
 import '../widgets2/logo_name_app.dart';
 import '../widgets2/text_auth.dart';
 class ItemCoursesWidget extends StatelessWidget {
   const ItemCoursesWidget({super.key,
     this.height,this.width,
-    required this.labels, this.type,this.widget});
+    required this.labels, this.type,required this.doneCharge,
+    required this.itemIndex
+  });
   final String labels;
   final String? type;
-  final  String? widget;
   final double ?height;
   final double ?width;
+  final bool doneCharge;
+  final int itemIndex;
   @override
   Widget build(BuildContext context) {
+    print("change index for $itemIndex");
     return Container(
       width:double.infinity ,
       height:100 ,
@@ -35,50 +40,29 @@ class ItemCoursesWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               TextAuth(text: labels, style: kTextStyle15bold),
-              // SizedBox(
-              //   height: 8.h,
-              // ),
               const Spacer(),
               Stack(alignment: Alignment.center, children: [
                 const LogoOfAppWidget(),
-                Icon(
-                  type==ourStudent  || widget == "me"?
-                  Icons.slow_motion_video:
-                      Icons.lock_outline
-                  ,
-                  size: 90,
-                  color: Colors.grey[400],
-                ),
+                Changes.changeIcon(type,itemIndex)
 
               ]),
-              // SizedBox(
-              //   height: 4,
-              // ),
-              //
-
               const Spacer(),
                     ]),
           ),
-          type==visitor || widget == "me"?const SizedBox() :
+          type==visitor ?const SizedBox() :
           Container(
-            width:Responsive.isTab(context)||Responsive.isWeb(context)?
-            type==notOurStudent?100.w :110:
-            type==notOurStudent?100.w :80.w,
-            height:
-            Responsive.isTab(context)||Responsive.isWeb(context)?
+            width: 110,
+            height: Responsive.isTab(context)||Responsive.isWeb(context)?
             type==notOurStudent?40.h :35.h:
             32,
-            decoration: BoxDecoration(
-                color:  kColor,
-
+            decoration: BoxDecoration(color:  kColor,
                 borderRadius: BorderRadius.circular(22.r)),
             child:
             Center(
               child: Text(
-                type==ourStudent?
-                "Third Secondary"  : "buy course",
+                Changes.changeText(type,itemIndex),
                 style: kTextStyle15grey.copyWith(color: Colors.white),
-              ).tr(),
+              ).tr()
             ),
           ),
 

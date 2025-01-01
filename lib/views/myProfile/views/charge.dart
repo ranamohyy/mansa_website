@@ -8,9 +8,12 @@ import 'package:mansa/core/utils/constans.dart';
 import 'package:mansa/views/home/home.dart';
 import 'package:mansa/views/widgets/app_bar_helper.dart';
 import 'package:mansa/views/widgets/custom_button_for_devices.dart';
+
+import '../../../core/helpers/changes.dart';
 class ChargeWallet extends StatelessWidget {
   final String type;
-  const ChargeWallet({super.key,required this.type});
+  final int selectedItem;
+  const ChargeWallet({super.key,required this.type,required this.selectedItem});
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +24,10 @@ class ChargeWallet extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            // Responsive.isWeb(context)&&type=='web'?BackButton():SizedBox(),
             AspectRatio(
                 aspectRatio: 0.04/0.007,
                 child: Image.asset(AppImage.fawry,)),
             SizedBox(height: 12.h,),
-
             const Text("برجاء التوجهه إلي أقرب ماكينة فوري لشحن المحفظة سيتم إرسال كود علي هاتفك وثم شراء الكورس"),
             SizedBox(height: 12.h,),
             Padding(
@@ -35,7 +36,10 @@ class ChargeWallet extends StatelessWidget {
             ,SizedBox(
                 width: 110.w,
                 child: CustomButtonForDevices(onPressed: (){
-                  AppRouter.navigateTo(const HomePage(type: ourStudent));
+                  Changes.chargeStatus[selectedItem]=true;
+                  AppRouter.navigateTo(
+                       HomePage(
+                        type: notOurStudent,doneCharged:selectedItem ,));
                 },
                   style:kTextStyle20white,
                   text:"شحن",

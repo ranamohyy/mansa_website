@@ -28,7 +28,7 @@ class _WebHomeViewState extends State<WebHomeView> {
     const MyAcc(),
     const MyCourses(),
     Results(),
-    const ChargeWallet(type: "web",),
+    const ChargeWallet(type: "web",selectedItem:  0,),
     const Suggestions(),
     const Aboutapp(),
   ];
