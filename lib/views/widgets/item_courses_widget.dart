@@ -20,7 +20,6 @@ class ItemCoursesWidget extends StatelessWidget {
   final int itemIndex;
   @override
   Widget build(BuildContext context) {
-    print("change index for $itemIndex");
     return Container(
       width:double.infinity ,
       height:100 ,

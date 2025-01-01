@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mansa/core/utils/constans.dart';
 
+import '../../models/courses_model.dart';
+import '../../models/lessons_model.dart';
+
  class Changes{
    static List<bool>chargeStatus=List.generate(6, (index) => false,);
 
@@ -21,7 +24,20 @@ import 'package:mansa/core/utils/constans.dart';
       color: Colors.grey[400],);
   }
  }
-  changeOnTap(){}
+   static String labels(index,i){
+     //labels for home
+     if(index==0){
+       return HomeModel.labelOfCourses[i];
+
+     }//labels for courseView
+     else if(index==1){
+       return LessonsModel.labels[i];
+     }
+     //for mycourses
+     else{return "first Chapter";}
+   }
+
+   changeOnTap(){}
 
 
 
