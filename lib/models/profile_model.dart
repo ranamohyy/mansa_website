@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mansa/core/utils/constans.dart';
 import '../core/assets.dart';
 import '../views/myProfile/views/aboutApp.dart';
 import '../views/myProfile/views/charge.dart';
@@ -11,16 +12,14 @@ import '../views/myProfile/views/suggestions.dart';
 
 class ProfileModel {
   static Map<String,Widget> tileAndIconComponents = {
-  "Myaccount":SvgPicture.asset(AppImage.user),
-  "courses":SvgPicture.asset(AppImage.courses),
-  "results":SvgPicture.asset(AppImage.results),
-  "recharge":SvgPicture.asset(AppImage.chargeWallet),
-  "FAQ":SvgPicture.asset(AppImage.faq),
-  "aboutApp":const FaIcon(FontAwesomeIcons.circleQuestion, color: Color(0xff4EB7F2)),
-  "changeLang":const Icon(
-  Icons.language,
-  color: Color(0xff4EB7F2),),
-  "logOut":SvgPicture.asset(AppImage.logout),
+    "Myaccount":const Icon(Icons.person,color: kPrimaryColor,),
+    "courses":const Icon(Icons.school,color: kPrimaryColor,),
+    "results":const FaIcon(FontAwesomeIcons.squarePollVertical,color: kPrimaryColor,),
+    "recharge":const Icon(Icons.wallet,color: kPrimaryColor,),
+    "FAQ":const Icon(Icons.comment,color: kPrimaryColor,),
+    "aboutApp":const FaIcon(FontAwesomeIcons.circleQuestion, color: kPrimaryColor),
+    "changeLang":const Icon(Icons.language, color: kPrimaryColor,),
+    "logOut":SvgPicture.asset(AppImage.logout),
 
 
   };
@@ -34,14 +33,14 @@ class ProfileModel {
 
   ];
   static Map<String,Widget> tileAndIconComponentsForWeb = {
-    "home":const Icon(Icons.home_rounded,color: Color(0xff4EB7F2) ,size: 24,),
-    "Myaccount":SvgPicture.asset(AppImage.user),
-    "courses":SvgPicture.asset(AppImage.courses),
-    "results":SvgPicture.asset(AppImage.results),
-    "recharge":SvgPicture.asset(AppImage.chargeWallet),
-    "FAQ":SvgPicture.asset(AppImage.faq),
-    "aboutApp":const FaIcon(FontAwesomeIcons.circleQuestion, color: Color(0xff4EB7F2)),
-    "changeLang":const Icon(Icons.language, color: Color(0xff4EB7F2),),
+    "home":const Icon(Icons.home_rounded,color: kPrimaryColor ,size: 24,),
+    "Myaccount":const Icon(Icons.person,color: kPrimaryColor,),
+    "courses":const Icon(Icons.school,color: kPrimaryColor,),
+    "results":const FaIcon(FontAwesomeIcons.squarePollVertical,color: kPrimaryColor,),
+    "recharge":const Icon(Icons.wallet,color: kPrimaryColor,),
+    "FAQ":const Icon(Icons.comment,color: kPrimaryColor,),
+    "aboutApp":const FaIcon(FontAwesomeIcons.circleQuestion, color: kPrimaryColor),
+    "changeLang":const Icon(Icons.language, color: kPrimaryColor,),
     "logOut":SvgPicture.asset(AppImage.logout),
 
 
