@@ -56,9 +56,6 @@ class _CustomItemCoursesForHomeAndCoursesState
                           widget.type, HomeModel.labelOfCourses[i], i,Changes.chargeStatus[i]);
                     }
 
-                    setState(() {
-                      Changes.chargeStatus[i] = true;
-                    });
                   },
                   child: ItemCoursesWidget(
                     itemIndex: i,
