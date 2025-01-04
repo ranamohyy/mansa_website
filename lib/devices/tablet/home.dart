@@ -19,7 +19,7 @@ class TabletHomeView extends StatelessWidget {
                   onPressed: () {
                     Scaffold.of(context).openDrawer();
                   },
-                  icon: const Icon(Icons.menu));
+                  icon: const Icon(Icons.menu,color: kPrimaryColor,));
             })),
         drawer:  Drawer(
           child: MobileMyProfile(
