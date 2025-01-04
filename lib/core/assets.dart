@@ -12,6 +12,9 @@ class AppImage{
   static const String results ="assets/images/results.svg";
   static const String user ="assets/images/user.svg";
   static const String courses ="assets/images/caourses.svg";
+  static const String chemistry ="assets/images/chemistry.svg";
+  static const String cupMaterial ="assets/images/chemis.svg";
+  static const String science ="assets/images/science.svg";
   static const String faq ="assets/images/graph.svg";
 
 
