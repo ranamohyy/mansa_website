@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:mansa/core/routes/route.dart';
 import 'package:mansa/views/auth/login/view.dart';
+import '../../core/assets.dart';
 import '../../core/utils/constans.dart';
 import '../../core/utils/utils.dart';
 import '../../models/profile_model.dart';
@@ -22,8 +24,21 @@ class WebHomeView extends StatefulWidget {
 class _WebHomeViewState extends State<WebHomeView> {
   int index = 0;
   late List<Widget> views = [
-    CustomHomeForAllDevices(
-      type: widget.type,
+    Stack(
+      alignment: AlignmentDirectional.bottomEnd,
+      children:[ CustomHomeForAllDevices(
+        type: widget.type,
+      ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SizedBox(
+              height: 200,
+              width: 200,
+              child: SvgPicture.asset(AppImage.cupMaterial,colorFilter:const ColorFilter.linearToSrgbGamma() ,)
+              // SvgPicture.asset(AppImage.chemistry)
+          ),
+        ),
+      ]
     ),
     const MyAcc(),
     const MyCourses(),
